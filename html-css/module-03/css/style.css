@@ -58,8 +58,8 @@
     margin: 0 0 135px 0;
 }
 
-.article-list .row:last-child{
-    margin: 0 0 60px 0;
+.article-list .row-last{
+    margin-bottom: 0px;
 }
 
 .article-list article img {
@@ -73,7 +73,7 @@
     line-height: 1;
     text-transform: uppercase;
     color: #b4ad9e;
-}
+}    
 
 .article-list article h2 {
     margin: 0 0 40px 0;
@@ -90,7 +90,7 @@
 
 main button {
     display: block;
-    margin: 0 auto;
+    margin: 60px auto 70px auto;
     padding: 20px 35px;
     font-family: 'Playfair Display', serif;
     font-size: 20px;
