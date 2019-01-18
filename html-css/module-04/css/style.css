@@ -48,9 +48,9 @@ h1 {
   text-transform: uppercase;
 }
 
-.clearfix {
-  display: table;
+.clearfix::after {
   content: '';
+  display: table;
   clear: both;
 }
 
@@ -81,6 +81,9 @@ h1 {
   color: #1abc9c;
 }
 
+.gallary-wrapper {
+  margin: 0 auto;
+}
 .gallary-title,
 .blog-title {
   text-align: center;
@@ -123,11 +126,6 @@ h1 {
   background: #7fd9c7;
 }
 
-.gallary-photo {
-  width: inherit;
-  text-align: center;
-}
-
 .gallary-item-description {
   float: left;
   width: 200px;
@@ -144,7 +142,7 @@ h1 {
 .gallary-item-price {
   float: left;
   width: 55px;
-  background-color: rgba(0, 0, 0, 0.44);
+  background-color: rgba(255, 255, 255, 0.44);
 }
 
 .gallary-item-price-text {
