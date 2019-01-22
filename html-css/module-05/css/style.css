@@ -128,9 +128,10 @@ h1 {
   clear: both;
   width: 25px;
   margin-top: 40px;
-  margin-left: 40px;
+  margin-left: 37px;
   border: 1px solid #ffffff;
-  transform: rotate(-45deg)
+  transform: rotate(-45deg);
+  box-sizing: border-box;
 }
 
 .prev:after {
@@ -138,10 +139,11 @@ h1 {
   display: block;
   clear: both;
   width: 25px;
-  margin-top: 17px;
-  margin-left: 40px;
+  margin-top: 15px;
+  margin-left: 37px;
   border: 1px solid #ffffff;
-  transform: rotate(45deg)
+  transform: rotate(45deg);
+  box-sizing: border-box;
 }
 
 .next:before {
@@ -150,9 +152,10 @@ h1 {
   clear: both;
   width: 25px;
   margin-top: 40px;
-  margin-left: 40px;
+  margin-left: 37px;
   border: 1px solid #ffffff;
-  transform: rotate(45deg)
+  transform: rotate(45deg);
+  box-sizing: border-box;
 }
 
 .next:after {
@@ -160,10 +163,11 @@ h1 {
   display: block;
   clear: both;
   width: 25px;
-  margin-top: 17px;
-  margin-left: 40px;
+  margin-top: 15px;
+  margin-left: 37px;
   border: 1px solid #ffffff;
-  transform: rotate(-45deg)
+  transform: rotate(-45deg);
+  box-sizing: border-box;
 }
 
 .slider-text {
