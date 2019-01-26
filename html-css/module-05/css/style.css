@@ -102,19 +102,16 @@ h1 {
   background-color: rgba(0, 0, 0, 0.52);
 }
 
-.slider-caption-wrapper {
-  display: block;
-  margin: 0 auto;
-  max-width: 1170px;
-  padding: 13.75% 30px 0 30px;
+.slider-caption-transform {
+  transform: translateY(200px);
 }
 
 .prev,
 .next {
-  display: block;
   float: left;
   width: 100px;
   height: 100px;
+  border: none;
   background-color: #1abc9c;
 }
 
@@ -122,52 +119,10 @@ h1 {
   float: right;
 }
 
-.prev:before {
-  content: "";
-  display: block;
-  clear: both;
-  width: 25px;
-  margin-top: 40px;
-  margin-left: 37px;
-  border: 1px solid #ffffff;
-  transform: rotate(-45deg);
-  box-sizing: border-box;
-}
-
-.prev:after {
-  content: "";
-  display: block;
-  clear: both;
-  width: 25px;
-  margin-top: 15px;
-  margin-left: 37px;
-  border: 1px solid #ffffff;
-  transform: rotate(45deg);
-  box-sizing: border-box;
-}
-
-.next:before {
-  content: "";
-  display: block;
-  clear: both;
-  width: 25px;
-  margin-top: 40px;
-  margin-left: 37px;
-  border: 1px solid #ffffff;
-  transform: rotate(45deg);
-  box-sizing: border-box;
-}
-
-.next:after {
-  content: "";
-  display: block;
-  clear: both;
-  width: 25px;
-  margin-top: 15px;
-  margin-left: 37px;
-  border: 1px solid #ffffff;
-  transform: rotate(-45deg);
-  box-sizing: border-box;
+.fa-angle-left,
+.fa-angle-right {
+  font-size: 50px;
+  color: #ffffff
 }
 
 .slider-text {
@@ -219,6 +174,7 @@ h1 {
 }
 
 .gallary-item-container {
+  position: relative;
   display: block;
   float: left;
   width: 255px;
@@ -234,10 +190,6 @@ h1 {
   background: #1abc9c;
 }
 
-.gallary-item {
-  position: relative;
-}
-
 .gallary-photo {
   display: block;
 }
@@ -246,25 +198,19 @@ h1 {
   background-color: #323232;
 }
 
-.gallary-item-description {
+.gallary-item-description-text {
   float: left;
   width: 200px;
-}
-
-.gallary-item-description-text {
   color: white;
   text-transform: uppercase;
   font-size: 18px;
   padding: 10px 0 10px 15px;
 }
 
-.gallary-item-price {
+.gallary-item-price-text {
   float: left;
   width: 55px;
   background-color: rgba(255, 255, 255, 0.44);
-}
-
-.gallary-item-price-text {
   color: white;
   text-transform: uppercase;
   font-size: 18px;
@@ -274,24 +220,30 @@ h1 {
 
 .gallary-overlay {
   position: absolute;
-  display: none;
-  top: 3%;
-  left: 4%;
-  width: 92%;
-  height: 82%;
+  opacity: 0;
+  display: inline-block;
+  top: 11px;
+  left: 10px;
+  width: 235px;
+  height: 260px;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.55);
+  vertical-align: middle;
 }
 
-.gallary-item:hover .gallary-overlay {
-  display: block
+.gallary-item-container:hover .gallary-overlay {
+  opacity: 100;
+  display: inline-block;
+  vertical-align: middle;
 }
 
-.gallary-icon-wrapper {
-  display: block;
+.gallary-icon-content {
+  display: inline-block;
   width: 166px;
-  margin: 0 auto;
-  padding-top: 70px;
+}
+
+.gallary-item {
+  vertical-align: middle;
 }
 
 .gallary-icon {
@@ -324,7 +276,6 @@ h1 {
   float: left;
   width: 166px;
   margin-top: 7px;
-  ;
   border: 1px solid #ffffff;
   background-color: #323232;
 }
@@ -358,4 +309,5 @@ h1 {
 
 .footer-text-color {
   color: #46bfa9;
+  text-decoration: none
 }
