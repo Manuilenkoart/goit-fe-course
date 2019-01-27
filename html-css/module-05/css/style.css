@@ -10,7 +10,7 @@ body {
 }
 
 .container {
-  max-width: 1170px;
+  width: 1170px;
   margin: 0 auto;
   padding: 0 30px;
 }
@@ -152,14 +152,15 @@ h1 {
 .slider-title {
   font-size: 60px;
   line-height: 1;
-  font-weight: 400;
+ 
   color: #ffffff;
   text-transform: uppercase
 }
 
 .slider-description {
-  padding-top: 2.18%;
+  padding-top: 35px;
   font-size: 24px;
+  line-height: 1;
   font-weight: 300;
   color: #ffffff;
   text-transform: uppercase;
