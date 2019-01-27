@@ -127,25 +127,21 @@ h1 {
   background-color: #323232;
 }
 
-.gallary-item-description {
-  float: left;
-  width: 200px;
-}
+
 
 .gallary-item-description-text {
+  float: left;
+  width: 200px;
   color: white;
   text-transform: uppercase;
   font-size: 18px;
   padding: 10px 0 10px 15px;
 }
 
-.gallary-item-price {
+.gallary-item-price-text {
   float: left;
   width: 55px;
   background-color: rgba(255, 255, 255, 0.44);
-}
-
-.gallary-item-price-text {
   color: white;
   text-transform: uppercase;
   font-size: 18px;
