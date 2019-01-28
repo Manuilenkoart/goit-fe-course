@@ -10,7 +10,7 @@ body {
 }
 
 .container {
-  width: 1170px;
+  max-width: 1170px;
   margin: 0 auto;
   padding: 0 30px;
 }
@@ -107,7 +107,7 @@ h1 {
   display: inline-block;
   top: 50%;
   left: 50%;
-  width: 1110px;
+  width: 100%;
   transform: translate(-50%, -50%);
   text-align: center;
 }
@@ -152,7 +152,6 @@ h1 {
 .slider-title {
   font-size: 60px;
   line-height: 1;
- 
   color: #ffffff;
   text-transform: uppercase
 }

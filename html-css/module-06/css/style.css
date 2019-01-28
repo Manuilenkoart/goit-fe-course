@@ -1,5 +1,4 @@
-
-
+@import "./vars.css";
 * {
   margin: 0;
   padding: 0;
@@ -10,25 +9,145 @@
   max-width: 1200px;
   margin: auto;
 }
+
 .header {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
 }
+
+.logo {
+  font-size: 30px;
+  font-weight: 900;
+  line-height: 1;
+}
+
 .logo-link {
+  font-family: var(--main-font);
+  color: var(--main-font-color);
   text-decoration: none;
 }
+
 .nav-list {
   display: flex;
+  width: 490px;
+  justify-content: space-between;
 }
-.list-item {
-  margin-right: 57px;
+
+li {
   list-style: none;
 }
-.list-item:last-child {
-  margin-right: 0;
+
+.list-item:hover ::after {
+  display: flex;
+  content: "";
+  clear: both;
+  width: 100%;
+  border: 1px solid var(--second-color);
+  margin-top: 10px;
+}
+
+.nav-link:hover {
+  color: var(--second-color)
 }
 
 .nav-link {
+  font-family: var(--main-font);
+  font-size: 14;
+  font-weight: 400;
+  color: var(--main-font-color);
   text-decoration: none;
+  text-transform: uppercase;
+}
+
+.team-title-up,
+.services-title-up {
+  display: flex;
+  justify-content: center;
+  font-family: var(--font-kausan);
+  font-size: 24px;
+  color: var(--font-color-b);
+}
+
+.team-title,
+.services-title {
+  display: flex;
+  justify-content: center;
+  font-family: var(--main-font);
+  font-size: 30px;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: var(--font-color-b);
+}
+
+.services-title::after {
+  display: flex;
+  content: "";
+  clear: both;
+  justify-content: center;
+  width: 60px;
+  border: 1px solid var(--second-color);
+  margin-top: 40px;
+  margin-bottom: 60px;
+}
+
+.services-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.services-item {
+  display: flex;
+  width: 380px;
+  background-color: #eeee;
+  justify-content: space-around;
+}
+
+.services-item-cont {
+  display: flex;
+  flex-wrap: wrap;
+  width: 300px;
+}
+
+.services-item-title,
+.last-name {
+  font-family: var(--main-font);
+  font-size: 14px;
+  color: var(--font-color-b);
+  text-transform: uppercase;
+}
+
+.services-item-text,
+.team-descr {
+  font-family: var(--font-roboto);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  color: var( --font-color-light-b);
+}
+
+.team-descr {
+  display: flex;
+  width: 980px;
+  margin: auto;
+  text-align: center;
+}
+
+.team-card-cont {
+  display: flex;
+  justify-content: space-between;
+}
+
+.team-card {
+  width: 380px;
+  text-align: center;
+}
+
+.position {
+  font-family: var(--font-roboto);
+  font-size: 15px;
+  line-height: 24px;
+  font-weight: 300;
+  font-style: italic;
 }
