@@ -34,7 +34,7 @@
 
 .nav-list {
   display: flex;
-  width: 490px;
+  max-width: 490px;
   justify-content: space-between;
 }
 
@@ -57,7 +57,7 @@ li {
 
 .nav-link {
   font-family: var(--main-font);
-  font-size: 14;
+  font-size: 14px;
   font-weight: 400;
   color: var(--main-font-color);
   text-decoration: none;
