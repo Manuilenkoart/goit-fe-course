@@ -34,7 +34,7 @@
 
 .nav-list {
   display: flex;
-  max-width: 490px;
+width: 490px;
   justify-content: space-between;
 }
 
@@ -244,6 +244,7 @@ li {
   display: flex;
   width: 1200px;
   height: 50px;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   margin-top: 80px;
