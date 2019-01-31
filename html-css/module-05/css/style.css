@@ -89,16 +89,17 @@ h1 {
   height: auto;
 }
 
-.slider-caption {
+.slider-caption {}
+
+.overlay {}
+
+.slider::before {
+  content: "";
+  clear: both;
   position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
   text-align: center;
-}
-
-.overlay {
   background-color: rgba(0, 0, 0, 0.52);
 }
 
@@ -255,8 +256,6 @@ h1 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  display: block;
-  width: 166px;
 }
 
 .gallary-item {
