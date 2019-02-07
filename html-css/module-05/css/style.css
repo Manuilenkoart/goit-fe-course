@@ -207,6 +207,8 @@ h1 {
 
 .gallary-photo {
   display: block;
+  width: 100%;
+  height: auto;
 }
 
 .gallary-item-bc {
@@ -215,7 +217,6 @@ h1 {
 
 .gallary-item-description-text {
   float: left;
-  width: 200px;
   color: white;
   text-transform: uppercase;
   font-size: 18px;
@@ -223,7 +224,7 @@ h1 {
 }
 
 .gallary-item-price-text {
-  float: left;
+  float: right;
   width: 55px;
   background-color: rgba(255, 255, 255, 0.44);
   color: white;
