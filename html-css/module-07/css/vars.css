@@ -1,4 +1,8 @@
 :root {
-  --Montserrat: 'Montserrat', serif, sans-serif;
-  --Roboto: 'Roboto Slab', serif, sans-serif;
+  --Montserrat: 'Montserrat', sans-serif;
+  --Roboto: 'Roboto Slab', sans-serif;
+  --Pacifico: 'Pacifico', cursive;
+  --g73: #bbbbbb;
+  --g47:#777777;
+  --g13: #222222;
 }
