@@ -101,10 +101,10 @@ li {
   display: flex;
   justify-content: center;
   margin-top: 20px;
-  text-transform: lowercase;
+  text-transform: none;
   font-weight: 400;
   font-size: 16px;
- 
+ font-style: italic;
   color: var(--g47);
 }
 
