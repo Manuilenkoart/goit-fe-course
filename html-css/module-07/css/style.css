@@ -1,0 +1,164 @@
+@import "./vars.css";
+@import "./fonts.css";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 940px;
+  margin: auto;
+}
+
+.header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 130px;
+}
+
+.logo-link {
+  text-decoration: none;
+}
+
+.logo {
+  color: #fed136;
+}
+
+li {
+  list-style: none;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: space-between
+}
+
+.list-item {
+  margin-right: 40px;
+}
+
+.list-item:last-child {
+  margin: 0;
+}
+
+.nav-link {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #222222;
+}
+
+.nav-link:hover {
+  color: #fed136;
+}
+.services {
+  margin-bottom: 125px;
+}
+.service-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.service-item {
+  width: 290px;
+  text-align: center;
+}
+.service-item-text {
+  font-family: var(--Roboto);
+  font-weight: normal;
+  font-size: 14px;
+}
+
+.service-title,
+.contact-title {
+  text-align: center;
+  margin-bottom: 80px;
+  font-family: var(--Montserrat);
+  font-size: 40px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.contact-title-down,
+.service-title-down {
+  display: flex;
+  justify-content: center;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.service-icon {
+  display: inline-block;
+  width: 66px;
+  height: 66px;
+  border-radius: 50%;
+  border: 3px solid #fed136;
+}
+
+.service-icon-1 {
+  background: url(../img/icon/basket.png) no-repeat center center;
+}
+
+.service-icon-2 {
+  background: url(../img/icon/laptop.png) no-repeat center center;
+}
+
+.service-icon-3 {
+  background: url(../img/icon/locked.png) no-repeat center center;
+}
+
+.footer-wrapper {
+  background: url(../img/map-image.png) no-repeat top right #222222;
+  background-size: contain;
+}
+
+.footer {
+  padding: 110px 0 115px 0;
+}
+
+.contact-title {
+  color: #ffffff;
+}
+
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.form-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-item {
+  margin-bottom: 30px;
+}
+
+.form-item:last-child {
+  margin-bottom: 0;
+}
+
+.form-input,
+.form-button {
+  width: 455px;
+  padding: 20px 0 20px 20px;
+  text-transform: uppercase;
+  border: 1px solid #222222;
+  border-radius: 5px;
+}
+
+.form-button {
+  background-color: #fed136;
+  margin: 30px auto 0 auto;
+}
+
+.form-textarea {
+  width: 455px;
+  border-radius: 5px;
+  padding: 20px;
+  text-transform: uppercase;
+  border: 1px solid #222222;
+}
