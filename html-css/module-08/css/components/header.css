@@ -1,0 +1,80 @@
+.mastheader-wrapper {
+  background: url(../../img/main-photo.png) center/cover no-repeat;
+}
+
+.masthead {
+  padding-top: 2rem;
+  padding-bottom: 14rem;
+  text-align: center;
+}
+
+.header {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.logo {
+  margin-top: 12rem;
+  font-family: var(--first-font);
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1;
+}
+.logo-link {
+
+  color: var(--first-color);
+}
+.nav-list {
+  display: flex;
+  justify-content: center;
+}
+
+.nav-item {
+  margin-right: 2rem;
+}
+
+.nav-item:last-child {
+  margin-right: 0;
+}
+.nav-link {
+  font-family: var(--first-font);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--first-color);
+}
+.header_btn {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  border: 0.2rem solid var(--first-color);
+  border-radius: 1.5rem;
+  color: var(--first-color);
+}
+.masthead_hero {
+  margin-top: 4rem;
+
+}
+.hero_title {
+  font-family: var(--first-font);
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--first-color);
+  text-transform: uppercase;
+}
+
+.hero_title_d {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+font-family: var(--second-font);
+font-size: 1.8rem;
+font-weight: 300;
+
+  text-transform: none;
+}
+
+.masthead_hero_btn {
+
+  color: var(--first-color);
+background-color: var(--second-color);
+}
+@media screen and (min-width: 768px) {}

@@ -1,6 +1,5 @@
 @import "./vars.css";
 @import "./fonts.css";
-
 * {
   margin: 0;
   padding: 0;
@@ -59,9 +58,11 @@ li {
 .nav-link:hover {
   color: #fed136;
 }
+
 .services {
   margin-bottom: 125px;
 }
+
 .service-list {
   display: flex;
   justify-content: space-between;
@@ -71,6 +72,7 @@ li {
   width: 290px;
   text-align: center;
 }
+
 .service-item-title {
   font-family: var(--Montserrat);
   font-weight: 700;
@@ -78,6 +80,7 @@ li {
   margin: 25px 0;
   color: var(--g13)
 }
+
 .service-item-text {
   font-family: var(--Roboto);
   font-weight: 400;
@@ -104,7 +107,7 @@ li {
   text-transform: none;
   font-weight: 400;
   font-size: 16px;
- font-style: italic;
+  font-style: italic;
   color: var(--g47);
 }
 
@@ -165,7 +168,7 @@ li {
   width: 455px;
   padding: 20px 0 20px 20px;
   text-transform: uppercase;
-  border: 1px solid #222222;
+  border: 3px solid #222222;
   border-radius: 5px;
   font-family: var(--Montserrat);
   font-weight: 700;
@@ -187,9 +190,25 @@ li {
   border-radius: 5px;
   padding: 20px;
   text-transform: uppercase;
-  border: 1px solid #222222;
+  border: 3px solid #222222;
   font-family: var(--Montserrat);
   font-weight: 700;
   font-size: 14px;
   color: var(--g73);
+}
+
+input:invalid:not(:placeholder-shown) {
+  border-color: red;
+}
+
+input:valid:not(:placeholder-shown) {
+  border-color: green;
+}
+
+textarea:invalid:not(:placeholder-shown) {
+  border-color: red;
+}
+
+textarea:valid:not(:placeholder-shown) {
+  border-color: green;
 }

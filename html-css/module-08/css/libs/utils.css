@@ -1,0 +1,51 @@
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap; /* 1 */
+}
+html {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+.wrapper {
+  min-width: 32rem;
+}
+ul {
+  padding: 0;
+  margin: 0;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+
+.btn {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-family: var(--first-font);
+  font-size: 1.4rem;
+  font-weight: 700;
+  
+}
+.btn-big {
+  display: inline-block;
+  width: 28rem;
+  text-align: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-family: var(--first-font);
+  font-size: 1.4rem;
+  font-weight: 700;
+  border-radius: 1.5rem;
+}

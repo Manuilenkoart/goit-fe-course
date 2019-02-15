@@ -1,0 +1,39 @@
+.partner {
+  text-align: center;
+}
+.partner-title {
+  font-family: var(--first-font);
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--third-color);
+}
+.partner-list {
+  display: flex;
+}
+
+.partner-cont {
+  position: relative;
+}
+.partner-name {
+  font-family: var(--first-font);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--third-color);
+}
+.partner-descr {
+  font-family: var(--second-font);
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: var(--fourth-color);
+}
+.overlay-icon {
+  position: absolute;
+  right: 20%;
+  bottom: 0;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  border: 0.5rem solid var(--first-color);
+  background: url(../../img/icon/shape1.png) center center no-repeat;
+  background-color: var(--second-color);
+}
