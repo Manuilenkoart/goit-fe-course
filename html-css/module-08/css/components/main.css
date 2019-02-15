@@ -1,39 +1,114 @@
 .partner {
   text-align: center;
+  padding-top: 7.5rem;
+  margin-bottom: 5.5em;
 }
+
 .partner-title {
   font-family: var(--first-font);
   font-size: 2.2rem;
   font-weight: 700;
   color: var(--third-color);
+  margin-bottom: 2rem;
 }
-.partner-list {
-  display: flex;
+
+.partner-item {
+  margin-bottom: 3rem;
 }
 
 .partner-cont {
+  display: inline-block;
   position: relative;
 }
+
+.partner-figure {}
+
 .partner-name {
   font-family: var(--first-font);
   font-size: 1.4rem;
   font-weight: 700;
   color: var(--third-color);
 }
+
 .partner-descr {
   font-family: var(--second-font);
   font-size: 1.4rem;
   font-weight: 300;
   color: var(--fourth-color);
 }
+
 .overlay-icon {
   position: absolute;
-  right: 20%;
+  right: 0;
   bottom: 0;
   width: 4rem;
   height: 4rem;
   border-radius: 50%;
   border: 0.5rem solid var(--first-color);
+}
+
+.icon-1 {
   background: url(../../img/icon/shape1.png) center center no-repeat;
   background-color: var(--second-color);
+}
+
+.icon-2 {
+  background: url(../../img/icon/Shape2.png) center center no-repeat;
+  background-color: var(--fifth-color);
+}
+
+.icon-3 {
+  background: url(../../img/icon/Shape3.png) center center no-repeat;
+  background-color: var(--sixth-color);
+}
+
+.icon-4 {
+  background: url(../../img/icon/Shape4.png) center center no-repeat;
+  background-color: var(--seventh-color);
+}
+
+.partner_btn {
+  width: 28rem;
+  border: 1px solid var(--second-color);
+  border-radius: 1.5rem;
+  color: var(--second-color);
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 74.8rem;
+  }
+  .masthead_hero {
+    margin-top: 14rem;
+  }
+  .hero_title {
+    width: 42rem;
+    margin: auto;
+  }
+  .masthead_hero_btn {
+    margin-top: 4rem;
+  }
+  .partner-title {
+    margin-bottom: 3.5rem;
+  }
+  .partner-item {
+    margin-bottom: 6rem;
+  }
+  figcaption {
+    width: 23.6rem;
+    margin: auto;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .container {
+    max-width: 94rem;
+  }
+  .partner-item:nth-last-child(-n+2) {
+    margin-bottom: 4rem;
+  }
+  figcaption {
+    width: 22em;
+    margin: auto;
+  }
 }

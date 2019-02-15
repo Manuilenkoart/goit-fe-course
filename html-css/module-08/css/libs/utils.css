@@ -8,24 +8,30 @@
   padding: 0;
   position: absolute;
   width: 1px;
-  white-space: nowrap; /* 1 */
+  white-space: nowrap;
+  /* 1 */
 }
+
 html {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   font-size: 62.5%;
 }
+
 .wrapper {
   min-width: 32rem;
 }
+
 ul {
   padding: 0;
   margin: 0;
 }
+
 li {
   list-style: none;
 }
+
 a {
   text-decoration: none;
 }
@@ -36,8 +42,8 @@ a {
   font-family: var(--first-font);
   font-size: 1.4rem;
   font-weight: 700;
-  
 }
+
 .btn-big {
   display: inline-block;
   width: 28rem;
@@ -49,3 +55,5 @@ a {
   font-weight: 700;
   border-radius: 1.5rem;
 }
+
+.container {}
