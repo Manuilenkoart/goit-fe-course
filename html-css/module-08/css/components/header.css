@@ -59,11 +59,13 @@
 }
 
 .hero_title {
+  width: 30rem;
   font-family: var(--first-font);
   font-size: 3rem;
   font-weight: 700;
   color: var(--first-color);
   text-transform: uppercase;
+  margin: 0 auto;
 }
 
 .hero_title_d {
@@ -93,4 +95,15 @@
   .logo {
     margin-top: 0;
   }
-} 
+  .masthead_hero {
+    margin-top: 14rem;
+  }
+  .hero_title {
+    width: 52rem;
+    font-size: 5.1rem;
+    margin: auto;
+  }
+  .masthead_hero_btn {
+    margin-top: 4rem;
+  }
+}

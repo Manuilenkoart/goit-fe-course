@@ -78,16 +78,6 @@
   .container {
     max-width: 74.8rem;
   }
-  .masthead_hero {
-    margin-top: 14rem;
-  }
-  .hero_title {
-    width: 42rem;
-    margin: auto;
-  }
-  .masthead_hero_btn {
-    margin-top: 4rem;
-  }
   .partner-title {
     margin-bottom: 3.5rem;
   }
@@ -111,4 +101,4 @@
     width: 22em;
     margin: auto;
   }
-} 
+}
