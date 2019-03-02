@@ -76,7 +76,7 @@
   font-size: 1.8rem;
   font-weight: 300;
   text-transform: none;
-  color: var(--first-color);
+  color: var(--first-color); 
 }
 
 .masthead_hero_btn {
