@@ -48,22 +48,22 @@
 }
 
 .icon-1 {
-  background: url(../../img/icon/shape1.png) center center no-repeat;
+  background: url(../img/icon/shape1.png) center center no-repeat;
   background-color: var(--second-color);
 }
 
 .icon-2 {
-  background: url(../../img/icon/Shape2.png) center center no-repeat;
+  background: url(../img/icon/Shape2.png) center center no-repeat;
   background-color: var(--fifth-color);
 }
 
 .icon-3 {
-  background: url(../../img/icon/Shape3.png) center center no-repeat;
+  background: url(../img/icon/Shape3.png) center center no-repeat;
   background-color: var(--sixth-color);
 }
 
 .icon-4 {
-  background: url(../../img/icon/Shape4.png) center center no-repeat;
+  background: url(../img/icon/Shape4.png) center center no-repeat;
   background-color: var(--seventh-color);
 }
 
@@ -77,9 +77,6 @@
 @media screen and (min-width: 768px) {
   .container {
     max-width: 74.8rem;
-  }
-  .btn-big{
-    width: 23rem;
   }
   .partner-title {
     margin-bottom: 3.5rem;
