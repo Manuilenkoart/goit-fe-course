@@ -22,8 +22,6 @@
   margin-bottom: 2rem;
 }
 
-
-
 .partner-name {
   font-family: var(--first-font);
   font-size: 1.4rem;
@@ -69,7 +67,6 @@
   background-color: var(--seventh-color);
 }
 
-
 .partner_btn {
   width: 28rem;
   border: 1px solid var(--second-color);
@@ -81,7 +78,7 @@
   .container {
     max-width: 74.8rem;
   }
-  .btn-big{
+  .btn-big {
     width: 23rem;
   }
   .partner-title {
@@ -97,18 +94,15 @@
   .partner_btn {
     width: 19rem;
   }
-
-
-@media screen and (min-width: 960px) {
-  .container {
-    max-width: 94rem;
+  @media screen and (min-width: 960px) {
+    .container {
+      max-width: 94rem;
+    }
+    .partner-item:nth-last-child(-n+2) {
+      margin-bottom: 4rem;
+    }
+    figcaption {
+      width: 22em;
+      margin: auto;
+    }
   }
-  .partner-item:nth-last-child(-n+2) {
-    margin-bottom: 4rem;
-  }
-  figcaption {
-    width: 22em;
-    margin: auto;
-  }
-
-}
