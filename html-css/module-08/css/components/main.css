@@ -19,15 +19,17 @@
 .partner-cont {
   display: inline-block;
   position: relative;
+  margin-bottom: 2rem;
 }
 
-.partner-figure {}
+
 
 .partner-name {
   font-family: var(--first-font);
   font-size: 1.4rem;
   font-weight: 700;
   color: var(--third-color);
+  margin-bottom: 2rem;
 }
 
 .partner-descr {
@@ -67,6 +69,7 @@
   background-color: var(--seventh-color);
 }
 
+
 .partner_btn {
   width: 28rem;
   border: 1px solid var(--second-color);
@@ -94,7 +97,7 @@
   .partner_btn {
     width: 19rem;
   }
-}
+
 
 @media screen and (min-width: 960px) {
   .container {
@@ -107,4 +110,5 @@
     width: 22em;
     margin: auto;
   }
+
 }
