@@ -50,7 +50,6 @@
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   border: 0.2rem solid var(--first-color);
-  border-radius: 1.5rem;
   color: var(--first-color);
 }
 
@@ -76,7 +75,7 @@
   font-size: 1.8rem;
   font-weight: 300;
   text-transform: none;
-  color: var(--first-color); 
+  color: var(--first-color);
 }
 
 .masthead_hero_btn {
@@ -86,8 +85,11 @@
 }
 
 @media screen and (min-width: 768px) {
-  .header {
+  .masthead {
     max-width: 66rem;
+    margin: auto;
+  }
+  .header {
     flex-direction: row;
     justify-content: space-between;
     align-items: baseline;
@@ -106,5 +108,11 @@
   }
   .masthead_hero_btn {
     margin-top: 4rem;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .masthead {
+    max-width: 94rem;
   }
 }

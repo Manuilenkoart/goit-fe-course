@@ -37,11 +37,15 @@ a {
 }
 
 .btn {
+  display: block;
+  margin: auto;
   padding-top: 1rem;
   padding-bottom: 1rem;
   font-family: var(--first-font);
   font-size: 1.4rem;
   font-weight: 700;
+  border-radius: 1.8rem;
+  box-sizing: border-box;
 }
 
 .btn-big {
@@ -53,6 +57,5 @@ a {
   font-family: var(--first-font);
   font-size: 1.4rem;
   font-weight: 700;
-  border-radius: 1.5rem;
+  border-radius: 1.8rem;
 }
-
