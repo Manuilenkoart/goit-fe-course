@@ -85,10 +85,6 @@
 }
 
 @media screen and (min-width: 768px) {
-  .masthead {
-    max-width: 66rem;
-    margin: auto;
-  }
   .header {
     flex-direction: row;
     justify-content: space-between;
@@ -100,6 +96,8 @@
   }
   .masthead_hero {
     margin-top: 14rem;
+    margin-left: auto;
+    margin-right: auto;
   }
   .hero_title {
     width: 52rem;
@@ -111,8 +109,3 @@
   }
 }
 
-@media screen and (min-width: 960px) {
-  .masthead {
-    max-width: 94rem;
-  }
-}
