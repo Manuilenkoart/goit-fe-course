@@ -1,4 +1,349 @@
 /*
    Import partials below
 */
+
 @import './normalize';
+@import "./vars.scss";
+@import'./team';
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.masterhead-wrapper {
+  max-width: 1920px;
+  height: 1000px;
+  margin: auto;
+  background: linear-gradient(to top, rgba(252, 227, 138, 0.91), rgba(243, 129, 129, 0.67)), url(../images/main.png) center/cover no-repeat;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+  .masterhead-wrapper {
+    background: linear-gradient(to top, rgba(252, 227, 138, 0.91), rgba(243, 129, 129, 0.67)), url(../images/main@2x.png) center/cover no-repeat;
+  }
+}
+
+.container {
+  max-width: 120rem;
+  margin: auto;
+}
+
+.masterhead {
+  &__hero {
+    text-align: center;
+    &-mt {
+      margin-top: 17rem;
+    }
+  }
+  &__title {
+    font-family: $main-font;
+    font-size: 15rem;
+    color: $third-color;
+    text-transform: uppercase;
+    &-it {
+      display: block;
+      font-family: $font-kausan;
+      font-weight: normal;
+      font-size: 7.2rem;
+      color: $third-color;
+      text-transform: none;
+    }
+    &-mb {
+      margin-bottom: 6.5rem;
+    }
+  }
+  &__btn {
+    padding: 1.2rem 3rem;
+    text-transform: uppercase;
+    background: transparent;
+    color: #ffffff;
+    border: 0.3rem solid $third-color;
+    font-family: $main-font;
+    font-size: 1.4rem;
+    line-height: 1;
+    font-weight: 700;
+    box-sizing: border-box;
+    cursor: pointer;
+    &-mt {
+      margin-top: 12rem;
+    }
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 3rem;
+}
+
+.logo-link {
+  &__title {
+    font-family: $main-font;
+    font-size: 3rem;
+    color: $third-color;
+  }
+}
+
+.nav-list {
+  display: flex;
+  &__item {
+    &-mr {
+      margin-right: 6rem;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+  &__link {
+    font-family: $main-font;
+    color: $third-color;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    font-weight: 400;
+    &:hover {
+      color: $fourth-color;
+    }
+    &:hover::after {
+      display: table;
+      content: "";
+      clear: both;
+      width: 100%;
+      border: 0.1rem solid $fourth-color;
+      margin-top: 1rem;
+    }
+  }
+}
+
+.services {
+  &__title {
+    text-align: center;
+    font-family: $main-font;
+    font-size: 3rem;
+    text-transform: uppercase;
+    &::after {
+      display: block;
+      content: "";
+      clear: both;
+      width: 6rem;
+      border: 0.3rem solid $second-color;
+      margin: 4rem auto 6rem auto;
+    }
+    &-it {
+      display: block;
+      font-family: $font-kausan;
+      font-size: 2.4rem;
+      text-transform: none;
+      color: $font-color-b;
+      font-weight: normal;
+    }
+    &-mt {
+      margin-top: 5rem;
+    }
+    &-mb {
+      margin-bottom: 2.5rem;
+    }
+  }
+}
+
+.services-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  &__item {
+    display: flex;
+    width: 38rem;
+    justify-content: space-around;
+    &-mb {
+      margin-bottom: 10rem;
+    }
+  }
+}
+
+.services-item {
+  width: 30rem;
+  &__title {
+    font-family: $main-font;
+    font-size: 1.4rem;
+    color: $font-color-b;
+    text-transform: uppercase;
+  }
+  &__text {
+    font-family: $font-roboto;
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 2.4rem;
+    color: $font-color-light-b;
+  }
+}  
+/*
+.team {
+  &__title {
+    &-up {}
+  }
+  &__descr {
+    text-align: center;
+    font-family: $font-roboto;
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 2.4rem;
+    color: $font-color-light-b;
+    &-mb {
+      margin-bottom: 10rem;
+    }
+    &-p {
+      padding: 0 11rem;
+    }
+  }
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__cont {
+    position: relative;
+    &::before {
+      content: "";
+      clear: both;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: $main-font-color;
+    }
+    &:hover {
+      opacity: 1;
+    }
+    &:hover.team__overlay {
+      visibility: visible;
+      opacity: 0.9;
+      box-shadow: 1rem 1rem 0px 0px $main-font-color;
+      transition: 0.2s linear;
+    }
+    &:hover{
+      transform: translate(-1rem, -1rem);
+      transition: 0.2s linear;
+    }
+    &:hover .team__overlay {
+      visibility: visible
+    }
+  }
+  &__img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+  &__overlay {
+    visibility: visible;
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+    height: 100%;
+    background-image: linear-gradient($second-color, $fourth-color);
+    opacity: .9;
+    &-icon {
+      opacity: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      width: 23rem;
+      justify-content: space-between;
+    }
+    &-link {
+      width: 5.6rem;
+      height: 5.6rem;
+      background-color: #fce38a;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &:hover {
+        background-color: $main-font-color;
+      }
+    }
+  }
+}
+
+.social-fb,
+.social-twitter,
+.social-pinterest,
+.social-instagram {
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.social-fb {
+  background-image: url(../../../module-06/img/icon/facebook.png);
+}
+
+.social-twitter {
+  background-image: url(../../../module-06/img/icon/twitter.png);
+}
+
+.social-pinterest {
+  background-image: url(../../../module-06/img/icon/pinterest.png);
+}
+
+.social-instagram {
+  background-image: url(../../../module-06/img/icon/instagram.png);
+}
+*/
+
+
+.footer {
+  display: flex;
+  max-width: 120rem;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 8rem;
+  padding: 1rem 0;
+  border-top: 0.1rem solid $font-color-light-b;
+  &__text,
+  &__link {
+    font-family: $main-font;
+    font-size: 1.4rem;
+    color: $second-color;
+    text-decoration: none;
+  }
+}
+
+.form {
+  display: flex;
+  &__input-mail {
+    padding: 0.8rem 1.5rem;
+    border: 0.1rem solid $font-color-light-b;
+  }
+  &__btn {
+    padding: 1.2rem 3rem;
+    text-transform: uppercase;
+    background: $main-font-color;
+    color: #ffffff;
+    border: none;
+    font-family: $main-font;
+    font-size: 1.4rem;
+    line-height: 1;
+    font-weight: 700;
+  }
+}
