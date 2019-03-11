@@ -1,22 +1,4 @@
-.services-item-text,
-.team__descr {
-  font-family: var(--font-roboto);
-  font-size: 15px;
-  font-weight: 400;
-  line-height: 24px;
-  color: var( --font-color-light-b);
-}
 
-.team__descr {
-  padding: 0 110px;
-  text-align: center;
-  margin-bottom: 100px;
-}
-
-.team__list {
-  display: flex;
-  justify-content: space-between;
-}
 
 .team__cont {
   position: relative;
@@ -118,7 +100,7 @@
   transition: 0.2s linear;
 }
 
-.lteam__last-name {
+.team__last-name {
   margin-top: 30px;
   margin-bottom: 15px;
   text-align: center;
@@ -132,4 +114,21 @@
   font-style: italic;
   color: var(--font-color-light-b);
   text-align: center;
+}
+
+
+.masterhead-wrapper {
+  max-width: 1920px;
+  height: 1000px;
+  margin: auto;
+  background: linear-gradient(to top, rgba(252, 227, 138, 0.91), rgba(243, 129, 129, 0.67)), url(../images/main.png) center/cover no-repeat;
+}
+
+
+
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+  .masterhead-wrapper {
+    background: linear-gradient(to top, rgba(252, 227, 138, 0.91), rgba(243, 129, 129, 0.67)), url(../images/main@2x.png) center/cover no-repeat;
+  }
 }

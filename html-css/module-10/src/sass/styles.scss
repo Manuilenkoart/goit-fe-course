@@ -4,7 +4,9 @@
 
 @import './normalize';
 @import "./vars.scss";
+@import'./vars-css';
 @import'./team';
+@import'./svg';   
 * {
   margin: 0;
   padding: 0;
@@ -30,20 +32,6 @@ li {
   list-style: none;
 }
 
-.masterhead-wrapper {
-  max-width: 1920px;
-  height: 1000px;
-  margin: auto;
-  background: linear-gradient(to top, rgba(252, 227, 138, 0.91), rgba(243, 129, 129, 0.67)), url(../images/main.png) center/cover no-repeat;
-}
-
-@media (-webkit-min-device-pixel-ratio: 2),
-(min-resolution: 192dpi) {
-  .masterhead-wrapper {
-    background: linear-gradient(to top, rgba(252, 227, 138, 0.91), rgba(243, 129, 129, 0.67)), url(../images/main@2x.png) center/cover no-repeat;
-  }
-}
-
 .container {
   max-width: 120rem;
   margin: auto;
@@ -55,7 +43,7 @@ li {
     &-mt {
       margin-top: 17rem;
     }
-  }
+  }   
   &__title {
     font-family: $main-font;
     font-size: 15rem;
@@ -132,9 +120,10 @@ li {
       border: 0.1rem solid $fourth-color;
       margin-top: 1rem;
     }
-  }
+     
+  }   
 }
-
+   
 .services {
   &__title {
     text-align: center;
@@ -195,11 +184,36 @@ li {
     line-height: 2.4rem;
     color: $font-color-light-b;
   }
-}  
-/*
+}
+
 .team {
   &__title {
-    &-up {}
+    text-align: center;
+    font-family: $main-font;
+    font-size: 3rem;
+    text-transform: uppercase;
+    &::after {
+      display: block;
+      content: "";
+      clear: both;
+      width: 6rem;
+      border: 0.3rem solid $second-color;
+      margin: 4rem auto 6rem auto;
+    }
+    &-it {
+      display: block;
+      font-family: $font-kausan;
+      font-size: 2.4rem;
+      text-transform: none;
+      color: $font-color-b;
+      font-weight: normal;
+    }
+    &-mt{
+      margin-top: 2rem;
+    }
+    &-mb{
+      margin-bottom: 2.5rem;
+    }
   }
   &__descr {
     text-align: center;
@@ -219,6 +233,9 @@ li {
     display: flex;
     justify-content: space-between;
   }
+}
+
+/*
   &__cont {
     position: relative;
     &::before {
@@ -286,31 +303,8 @@ li {
   }
 }
 
-.social-fb,
-.social-twitter,
-.social-pinterest,
-.social-instagram {
-  background-repeat: no-repeat;
-  background-position: center center;
-}
 
-.social-fb {
-  background-image: url(../../../module-06/img/icon/facebook.png);
-}
-
-.social-twitter {
-  background-image: url(../../../module-06/img/icon/twitter.png);
-}
-
-.social-pinterest {
-  background-image: url(../../../module-06/img/icon/pinterest.png);
-}
-
-.social-instagram {
-  background-image: url(../../../module-06/img/icon/instagram.png);
-}
 */
-
 
 .footer {
   display: flex;
@@ -346,4 +340,4 @@ li {
     line-height: 1;
     font-weight: 700;
   }
-}
+}   
