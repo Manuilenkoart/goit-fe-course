@@ -446,31 +446,7 @@ template {
   background-color: #95e1d3;
 }
 
-.social-fb,
-.social-twitter,
-.social-pinterest,
-.social-instagram {
-  background-repeat: no-repeat;
-  background-position: center center;
-}
-
-.social-fb {
-  background-image: url(../../../module-06/img/icon/facebook.png);
-}
-
-.social-twitter {
-  background-image: url(../../../module-06/img/icon/twitter.png);
-}
-
-.social-pinterest {
-  background-image: url(../../../module-06/img/icon/pinterest.png);
-}
-
-.social-instagram {
-  background-image: url(../../../module-06/img/icon/instagram.png);
-}
-
-.team-img-cont:hover .team-overlay {
+.team__cont:hover .team__overlay {
   visibility: visible;
 }
 
@@ -491,6 +467,10 @@ template {
   margin-top: 30px;
   margin-bottom: 15px;
   text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  color: #333333;
+  text-transform: uppercase;
 }
 
 .team__position {
@@ -516,7 +496,13 @@ template {
   fill: #95e1d3;
 }
 
-.nav-list__icon svg {
+.services-list__item-icon {
+  width: 32px;
+  height: 32px;
+  fill: red;
+}
+
+.nav-list__icon-svg {
   width: 18px;
   height: 14px;
   fill: #ffffff;
@@ -772,80 +758,8 @@ li {
   justify-content: space-between;
 }
 
-/*
-  &__cont {
-    position: relative;
-    &::before {
-      content: "";
-      clear: both;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: $main-font-color;
-    }
-    &:hover {
-      opacity: 1;
-    }
-    &:hover.team__overlay {
-      visibility: visible;
-      opacity: 0.9;
-      box-shadow: 1rem 1rem 0px 0px $main-font-color;
-      transition: 0.2s linear;
-    }
-    &:hover{
-      transform: translate(-1rem, -1rem);
-      transition: 0.2s linear;
-    }
-    &:hover .team__overlay {
-      visibility: visible
-    }
-  }
-  &__img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-  }
-  &__overlay {
-    visibility: visible;
-    position: absolute;
-    top: 0;
-    left: 0;
-    max-width: 100%;
-    height: 100%;
-    background-image: linear-gradient($second-color, $fourth-color);
-    opacity: .9;
-    &-icon {
-      opacity: 0;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      display: flex;
-      width: 23rem;
-      justify-content: space-between;
-    }
-    &-link {
-      width: 5.6rem;
-      height: 5.6rem;
-      background-color: #fce38a;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      &:hover {
-        background-color: $main-font-color;
-      }
-    }
-  }
-}
-
-
-*/
-
 .footer {
   display: flex;
-  max-width: 120rem;
   align-items: center;
   justify-content: space-between;
   margin-top: 8rem;
@@ -863,6 +777,9 @@ li {
 
 .form {
   display: flex;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.4rem;
+  color: #f38181;
 }
 
 .form__input-mail {
@@ -876,8 +793,6 @@ li {
   background: #95e1d3;
   color: #ffffff;
   border: none;
-  font-family: "Montserrat", sans-serif;
-  font-size: 1.4rem;
   line-height: 1;
   font-weight: 700;
 }
