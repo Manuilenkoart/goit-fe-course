@@ -1,17 +1,23 @@
-
 .services-list__item svg {
   width: 32px;
   height: 32px;
-  fill: $main-font-color;
+  fill:#95e1d3;
 }
-.nav-list__icon svg{
+
+.services-list__item-icon {
+  width: 32px;
+  height: 32px;
+  fill: red;
+}
+
+.nav-list__icon-svg {
   width: 18px;
   height: 14px;
-fill: $third-color;
+  fill:#ffffff;
 }
 
 .team__overlay-link svg {
   width: 32px;
   height: 32px;
-  fill: $second-color;
+  fill: #f38181;
 }

@@ -6,14 +6,14 @@
 @import "./vars.scss";
 @import'./vars-css';
 @import'./team';
-@import'./svg';   
+@import'./svg';
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-size: 62.5%;
 }
-
+         
 h1,
 h2,
 h3,
@@ -43,7 +43,7 @@ li {
     &-mt {
       margin-top: 17rem;
     }
-  }   
+  }
   &__title {
     font-family: $main-font;
     font-size: 15rem;
@@ -102,7 +102,7 @@ li {
         margin-right: 0;
       }
     }
-  }
+  } 
   &__link {
     font-family: $main-font;
     color: $third-color;
@@ -120,10 +120,9 @@ li {
       border: 0.1rem solid $fourth-color;
       margin-top: 1rem;
     }
-     
-  }   
+  }
 }
-   
+
 .services {
   &__title {
     text-align: center;
@@ -208,13 +207,13 @@ li {
       color: $font-color-b;
       font-weight: normal;
     }
-    &-mt{
+    &-mt {
       margin-top: 2rem;
     }
-    &-mb{
+    &-mb {
       margin-bottom: 2.5rem;
     }
-  }
+  } 
   &__descr {
     text-align: center;
     font-family: $font-roboto;
@@ -235,80 +234,8 @@ li {
   }
 }
 
-/*
-  &__cont {
-    position: relative;
-    &::before {
-      content: "";
-      clear: both;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: $main-font-color;
-    }
-    &:hover {
-      opacity: 1;
-    }
-    &:hover.team__overlay {
-      visibility: visible;
-      opacity: 0.9;
-      box-shadow: 1rem 1rem 0px 0px $main-font-color;
-      transition: 0.2s linear;
-    }
-    &:hover{
-      transform: translate(-1rem, -1rem);
-      transition: 0.2s linear;
-    }
-    &:hover .team__overlay {
-      visibility: visible
-    }
-  }
-  &__img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-  }
-  &__overlay {
-    visibility: visible;
-    position: absolute;
-    top: 0;
-    left: 0;
-    max-width: 100%;
-    height: 100%;
-    background-image: linear-gradient($second-color, $fourth-color);
-    opacity: .9;
-    &-icon {
-      opacity: 0;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      display: flex;
-      width: 23rem;
-      justify-content: space-between;
-    }
-    &-link {
-      width: 5.6rem;
-      height: 5.6rem;
-      background-color: #fce38a;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      &:hover {
-        background-color: $main-font-color;
-      }
-    }
-  }
-}
-
-
-*/
-
 .footer {
   display: flex;
-  max-width: 120rem;
   align-items: center;
   justify-content: space-between;
   margin-top: 8rem;
@@ -325,6 +252,9 @@ li {
 
 .form {
   display: flex;
+  font-family: $main-font;
+  font-size: 1.4rem;
+  color: $second-color;
   &__input-mail {
     padding: 0.8rem 1.5rem;
     border: 0.1rem solid $font-color-light-b;
@@ -335,9 +265,7 @@ li {
     background: $main-font-color;
     color: #ffffff;
     border: none;
-    font-family: $main-font;
-    font-size: 1.4rem;
     line-height: 1;
     font-weight: 700;
   }
-}   
+}

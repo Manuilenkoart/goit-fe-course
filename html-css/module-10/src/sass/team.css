@@ -1,5 +1,3 @@
-
-
 .team__cont {
   position: relative;
 }
@@ -60,31 +58,7 @@
   background-color: #95e1d3;
 }
 
-.social-fb,
-.social-twitter,
-.social-pinterest,
-.social-instagram {
-  background-repeat: no-repeat;
-  background-position: center center;
-}
-
-.social-fb {
-  background-image: url(../../../module-06/img/icon/facebook.png);
-}
-
-.social-twitter {
-  background-image: url(../../../module-06/img/icon/twitter.png);
-}
-
-.social-pinterest {
-  background-image: url(../../../module-06/img/icon/pinterest.png);
-}
-
-.social-instagram {
-  background-image: url(../../../module-06/img/icon/instagram.png);
-}
-
-.team-img-cont:hover .team-overlay {
+.team__cont:hover .team__overlay {
   visibility: visible
 }
 
@@ -104,6 +78,10 @@
   margin-top: 30px;
   margin-bottom: 15px;
   text-align: center;
+  font-family: $main-font;
+  font-size: 14px;
+  color: $font-color-b;
+  text-transform: uppercase;
 }
 
 .team__position {
@@ -116,7 +94,6 @@
   text-align: center;
 }
 
-
 .masterhead-wrapper {
   max-width: 1920px;
   height: 1000px;
@@ -124,11 +101,8 @@
   background: linear-gradient(to top, rgba(252, 227, 138, 0.91), rgba(243, 129, 129, 0.67)), url(../images/main.png) center/cover no-repeat;
 }
 
-
-
-@media (-webkit-min-device-pixel-ratio: 2),
-(min-resolution: 192dpi) {
+@media screen and (min-resolution: 192dpi) {
   .masterhead-wrapper {
-    background: linear-gradient(to top, rgba(252, 227, 138, 0.91), rgba(243, 129, 129, 0.67)), url(../images/main@2x.png) center/cover no-repeat;
+    background-image:  url(../images/main@2x.png) center/cover no-repeat;
   }
 }
