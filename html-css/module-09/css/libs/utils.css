@@ -49,13 +49,14 @@ a {
 }
 
 .btn-big {
-  display: inline-block;
-  width: 28rem;
-  text-align: center;
+  display: flex;
+  max-width: 28rem;
+  justify-content: center;
   padding-top: 1rem;
   padding-bottom: 1rem;
   font-family: var(--first-font);
   font-size: 1.4rem;
   font-weight: 700;
   border-radius: 1.8rem;
+  margin: auto;
 }
