@@ -1,7 +1,7 @@
 .services-list__item svg {
   width: 32px;
   height: 32px;
-  fill:#95e1d3;
+  fill: #95e1d3;
 }
 
 .services-list__item-icon {
@@ -13,11 +13,15 @@
 .nav-list__icon-svg {
   width: 18px;
   height: 14px;
-  fill:#ffffff;
+  fill: #ffffff;
 }
 
 .team__overlay-link svg {
   width: 32px;
   height: 32px;
   fill: #f38181;
+}
+
+.team__overlay-link:hover svg {
+  fill: #ffffff;
 }
