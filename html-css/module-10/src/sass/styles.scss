@@ -4,16 +4,16 @@
 
 @import './normalize';
 @import "./vars.scss";
-@import'./vars-css';
+@import'./vars.scss';
 @import'./team';
-@import'./svg';
+@import'./svg'; 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-size: 62.5%;
 }
-
+ 
 h1,
 h2,
 h3,
@@ -40,25 +40,32 @@ li {
 .masterhead {
   &__hero {
     text-align: center;
-    &-mt {
-      margin-top: 17rem;
-    }
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
   }
   &__title {
+    width: 82rem;
     font-family: $main-font;
-    font-size: 15rem;
+    font-size: 93.75em;
+    line-height: 1;
     color: $third-color;
     text-transform: uppercase;
+   
     &-it {
       display: block;
       font-family: $font-kausan;
       font-weight: normal;
-      font-size: 7.2rem;
+      font-size: 45em;
+      line-height: 1;
       color: $third-color;
       text-transform: none;
     }
     &-mb {
-      margin-bottom: 6.5rem;
+      margin-bottom: 0.3em;
     }
   }
   &__btn {
@@ -74,7 +81,7 @@ li {
     box-sizing: border-box;
     cursor: pointer;
     &-mt {
-      margin-top: 12rem;
+      margin-top: 2em; 
     }
   }
 }
@@ -268,4 +275,4 @@ li {
     line-height: 1;
     font-weight: 700;
   }
-} 
+}  
