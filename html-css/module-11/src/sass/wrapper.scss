@@ -1,0 +1,11 @@
+.masterhead-wrapper {
+  max-width: 1920px;
+  height: 100vh;
+  margin: auto;
+  background: linear-gradient(to top, rgba(252, 227, 138, 0.91), rgba(243, 129, 129, 0.67)), url(../images/main.png) center/cover no-repeat;
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .masterhead-wrapper {
+      background: linear-gradient(to top, rgba(252, 227, 138, 0.91), rgba(243, 129, 129, 0.67)), url(../images/main@2x.png) center/cover no-repeat;
+    }
+  }
+}       

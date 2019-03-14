@@ -1,0 +1,340 @@
+/*
+   Import partials below
+*/
+
+@import './normalize';
+@import "./vars.scss";
+@import'./vars.scss';
+@import'./wrapper.scss';
+@import'./team.scss';
+@import'./svg.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+  max-width: 120rem;
+  margin: auto;
+}
+
+.masterhead {
+  &__hero {
+    text-align: center;
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  &__title {
+    width: 82rem;
+    font-family: $main-font;
+    font-size: 93.75em;
+    line-height: 1;
+    color: $third-color;
+    text-transform: uppercase;
+    
+    &-it {
+      display: block;
+      font-family: $font-kausan;
+      font-weight: normal;
+      font-size: 45em;
+      line-height: 1;
+      color: $third-color;
+      text-transform: none;
+    }
+    
+    &-mb {
+      margin-bottom: 0.3em;
+    }
+  }
+ 
+  &__btn {
+    padding: 1.2rem 3rem;
+    text-transform: uppercase;
+    background: transparent;
+    color: #ffffff;
+    border: 0.3rem solid $third-color;
+    font-family: $main-font;
+    font-size: 1.4rem;
+    line-height: 1;
+    font-weight: 700;
+    box-sizing: border-box;
+    cursor: pointer;
+   
+    &-mt {
+      margin-top: 2em;
+    }
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 3rem;
+  
+  &__cont {
+    display: flex;
+  }
+}
+
+.logo-link {
+  &__title {
+    font-family: $main-font;
+    font-size: 3rem;
+    color: $third-color;
+  }
+}
+
+.nav-list {
+  display: flex;
+ 
+  &__item {
+    &-mr {
+      margin-right: 6rem;
+    }
+  }
+ 
+  &__link {
+    font-family: $main-font;
+    color: $third-color;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    font-weight: 400;
+   
+    &:hover {
+      color: $fourth-color;
+    }
+   
+    &:hover::after {
+      display: table;
+      content: "";
+      clear: both;
+      width: 100%;
+      border: 0.1rem solid $fourth-color;
+      margin-top: 1rem;
+    }
+  }
+}
+
+.header__icon {
+  display: flex;
+  
+  &-mr {
+    margin-right: 6rem;
+   
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  
+  &-link {
+    font-family: $main-font;
+    color: $third-color;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    font-weight: 400;
+   
+    &:hover {
+      color: $fourth-color;
+    }
+   
+    &:hover::after {
+      display: table;
+      content: "";
+      clear: both;
+      width: 100%;
+      border: 0.1rem solid $fourth-color;
+      margin-top: 1rem;
+    }
+  }
+}
+
+.services {
+  &__title {
+    text-align: center;
+    font-family: $main-font;
+    font-size: 3rem;
+    text-transform: uppercase;
+    
+    &::after {
+      display: block;
+      content: "";
+      clear: both;
+      width: 6rem;
+      border: 0.3rem solid $second-color;
+      margin: 4rem auto 6rem auto;
+    }
+    
+    &-it {
+      display: block;
+      font-family: $font-kausan;
+      font-size: 2.4rem;
+      text-transform: none;
+      color: $font-color-b;
+      font-weight: normal;
+    }
+    
+    &-mt {
+      margin-top: 5rem;
+    }
+    
+    &-mb {
+      margin-bottom: 2.5rem;
+    }
+  }
+}
+
+.services-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  
+  &__item {
+    display: flex;
+    width: 38rem;
+    justify-content: space-around;
+    
+    &-mb {
+      margin-bottom: 10rem;
+    }
+  }
+}
+
+.services-item {
+  width: 30rem;
+  
+  &__title {
+    font-family: $main-font;
+    font-size: 1.4rem;
+    color: $font-color-b;
+    text-transform: uppercase;
+  }
+  
+  &__text {
+    font-family: $font-roboto;
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 2.4rem;
+    color: $font-color-light-b;
+  }
+}
+
+.team {
+  &__title {
+    text-align: center;
+    font-family: $main-font;
+    font-size: 3rem;
+    text-transform: uppercase; 
+    
+    &::after {
+      display: block;
+      content: "";
+      clear: both;
+      width: 6rem;
+      border: 0.3rem solid $second-color;
+      margin: 4rem auto 6rem auto;
+    }
+    
+    &-it {
+      display: block;
+      font-family: $font-kausan;
+      font-size: 2.4rem;
+      text-transform: none;
+      color: $font-color-b;
+      font-weight: normal;
+    }
+    
+    &-mt {
+      margin-top: 2rem;
+    }
+    
+    &-mb {
+      margin-bottom: 2.5rem;
+    }
+  }
+  
+  &__descr {
+    text-align: center;
+    font-family: $font-roboto;
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 2.4rem;
+    color: $font-color-light-b;
+    
+    &-mb {
+      margin-bottom: 10rem;
+    }
+    
+    &-p {
+      padding: 0 11rem;
+    }
+  }
+  
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 8rem;
+  padding: 1rem 0;
+  border-top: 0.1rem solid $font-color-light-b;
+ 
+  &__text,
+  &__link {
+    font-family: $main-font;
+    font-size: 1.4rem;
+    color: $second-color;
+    text-decoration: none;
+  }
+}
+
+.form {
+  display: flex;
+  font-family: $main-font;
+  font-size: 1.4rem;
+  color: $second-color;
+  
+  &__input-mail {
+    padding: 0.8rem 1.5rem;
+    border: 0.1rem solid $font-color-light-b;
+  }
+  
+  &__btn {
+    padding: 1.2rem 3rem;
+    text-transform: uppercase;
+    background: $main-font-color;
+    color: #ffffff;
+    border: none;
+    line-height: 1;
+    font-weight: 700;
+  }
+}
