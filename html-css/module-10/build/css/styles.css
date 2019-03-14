@@ -594,6 +594,10 @@ li {
   padding-top: 3rem;
 }
 
+.header__cont {
+  display: flex;
+}
+
 .logo-link__title {
   font-family: "Montserrat", sans-serif;
   font-size: 3rem;
@@ -606,10 +610,6 @@ li {
 
 .nav-list__item-mr {
   margin-right: 6rem;
-}
-
-.nav-list__item-mr:last-child {
-  margin-right: 0;
 }
 
 .nav-list__link {
@@ -625,6 +625,39 @@ li {
 }
 
 .nav-list__link:hover::after {
+  display: table;
+  content: "";
+  clear: both;
+  width: 100%;
+  border: 0.1rem solid #fce38a;
+  margin-top: 1rem;
+}
+
+.header__icon {
+  display: flex;
+}
+
+.header__icon-mr {
+  margin-right: 6rem;
+}
+
+.header__icon-mr:last-child {
+  margin-right: 0;
+}
+
+.header__icon-link {
+  font-family: "Montserrat", sans-serif;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+
+.header__icon-link:hover {
+  color: #fce38a;
+}
+
+.header__icon-link:hover::after {
   display: table;
   content: "";
   clear: both;

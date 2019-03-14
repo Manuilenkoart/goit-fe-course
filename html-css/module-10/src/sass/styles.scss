@@ -6,14 +6,14 @@
 @import "./vars.scss";
 @import'./vars.scss';
 @import'./team';
-@import'./svg'; 
+@import'./svg';
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-size: 62.5%;
 }
- 
+
 h1,
 h2,
 h3,
@@ -45,7 +45,6 @@ li {
     align-items: center;
     flex-direction: column;
     justify-content: center;
-
   }
   &__title {
     width: 82rem;
@@ -54,7 +53,6 @@ li {
     line-height: 1;
     color: $third-color;
     text-transform: uppercase;
-   
     &-it {
       display: block;
       font-family: $font-kausan;
@@ -81,7 +79,7 @@ li {
     box-sizing: border-box;
     cursor: pointer;
     &-mt {
-      margin-top: 2em; 
+      margin-top: 2em;
     }
   }
 }
@@ -90,6 +88,9 @@ li {
   display: flex;
   justify-content: space-between;
   padding-top: 3rem;
+  &__cont {
+    display: flex;
+  }
 }
 
 .logo-link {
@@ -105,12 +106,38 @@ li {
   &__item {
     &-mr {
       margin-right: 6rem;
-      &:last-child {
-        margin-right: 0;
-      }
     }
   }
   &__link {
+    font-family: $main-font;
+    color: $third-color;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    font-weight: 400;
+    &:hover {
+      color: $fourth-color;
+    }
+    &:hover::after {
+      display: table;
+      content: "";
+      clear: both;
+      width: 100%;
+      border: 0.1rem solid $fourth-color;
+      margin-top: 1rem;
+    }
+  }
+}
+
+.header__icon {
+  display: flex;
+  &-point {}
+  &-mr {
+    margin-right: 6rem;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  &-link {
     font-family: $main-font;
     color: $third-color;
     text-transform: uppercase;
@@ -275,4 +302,4 @@ li {
     line-height: 1;
     font-weight: 700;
   }
-}  
+}
