@@ -298,6 +298,23 @@ li {
     display: flex;
     justify-content: space-between;
   }
+
+  &__last-name {
+    font-family: $main-font;
+    font-size: 1.4rem;
+    color: $font-color-b;
+    text-transform: uppercase;
+  }
+
+  &__position {
+    font-family: $font-roboto;
+    font-size: 1.5rem;
+    line-height: 2.4rem;
+    font-weight: 300;
+    font-style: italic;
+    color: $font-color-light-b;
+    text-align: center;
+  }
 }
 
 .footer {
@@ -308,7 +325,13 @@ li {
   padding: 1rem 0;
   border-top: 0.1rem solid $font-color-light-b;
  
-  &__text,
+  &__text {
+    font-family: $main-font;
+    font-size: 1.4rem;
+    color: $font-color-light-b;
+    text-decoration: none;
+  }
+   
   &__link {
     font-family: $main-font;
     font-size: 1.4rem;

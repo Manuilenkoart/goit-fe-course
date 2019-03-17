@@ -783,6 +783,23 @@ li {
   justify-content: space-between;
 }
 
+.team__last-name {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.4rem;
+  color: #333333;
+  text-transform: uppercase;
+}
+
+.team__position {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5rem;
+  line-height: 2.4rem;
+  font-weight: 300;
+  font-style: italic;
+  color: #999999;
+  text-align: center;
+}
+
 .footer {
   display: flex;
   align-items: center;
@@ -792,7 +809,13 @@ li {
   border-top: 0.1rem solid #999999;
 }
 
-.footer__text,
+.footer__text {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.4rem;
+  color: #999999;
+  text-decoration: none;
+}
+
 .footer__link {
   font-family: "Montserrat", sans-serif;
   font-size: 1.4rem;
