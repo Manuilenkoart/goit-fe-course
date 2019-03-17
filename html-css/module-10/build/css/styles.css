@@ -375,8 +375,42 @@ template {
   display: none;
 }
 
+.masterhead-wrapper {
+  max-width: 1920px;
+  height: 100vh;
+  margin: auto;
+  background: linear-gradient(to top, rgba(252, 227, 138, 0.91), rgba(243, 129, 129, 0.67)), url(../images/main.png) center/cover no-repeat;
+}
+
 .team__cont {
   position: relative;
+}
+
+.team__cont:hover {
+  -webkit-transform: translate(-10px, -10px);
+  transform: translate(-10px, -10px);
+  transition: 0.2s linear;
+}
+
+.team__cont:hover .team__overlay-icon {
+  opacity: 1;
+}
+
+.team__cont:hover .team__overlay {
+  visibility: visible;
+}
+
+.team__cont:hover .team__overlay {
+  visibility: visible;
+  opacity: 0.9;
+  box-shadow: 10px 10px 0px 0px #95e1d3;
+  transition: 0.2s linear;
+}
+
+.team__img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .team__img::before {
@@ -388,12 +422,6 @@ template {
   width: 100%;
   height: 100%;
   background-color: #95e1d3;
-}
-
-.team__img {
-  display: block;
-  width: 100%;
-  height: auto;
 }
 
 .team__overlay {
@@ -419,10 +447,6 @@ template {
   justify-content: space-between;
 }
 
-.team__cont:hover .team__overlay-icon {
-  opacity: 1;
-}
-
 .team__overlay-link {
   width: 56px;
   height: 56px;
@@ -434,23 +458,6 @@ template {
 
 .team__overlay-link:hover {
   background-color: #f38181;
-}
-
-.team__cont:hover .team__overlay {
-  visibility: visible;
-}
-
-.team__cont:hover .team__overlay {
-  visibility: visible;
-  opacity: 0.9;
-  box-shadow: 10px 10px 0px 0px #95e1d3;
-  transition: 0.2s linear;
-}
-
-.team__cont:hover {
-  -webkit-transform: translate(-10px, -10px);
-  transform: translate(-10px, -10px);
-  transition: 0.2s linear;
 }
 
 .team__last-name {
@@ -473,23 +480,10 @@ template {
   text-align: center;
 }
 
-.masterhead-wrapper {
-  max-width: 1920px;
-  height: 100vh;
-  margin: auto;
-  background: linear-gradient(to top, rgba(252, 227, 138, 0.91), rgba(243, 129, 129, 0.67)), url(../images/main.png) center/cover no-repeat;
-}
-
 .services-list__item svg {
   width: 32px;
   height: 32px;
   fill: #95e1d3;
-}
-
-.services-list__item-icon {
-  width: 32px;
-  height: 32px;
-  fill: red;
 }
 
 .nav-list__icon-svg {
@@ -789,6 +783,23 @@ li {
   justify-content: space-between;
 }
 
+.team__last-name {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.4rem;
+  color: #333333;
+  text-transform: uppercase;
+}
+
+.team__position {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5rem;
+  line-height: 2.4rem;
+  font-weight: 300;
+  font-style: italic;
+  color: #999999;
+  text-align: center;
+}
+
 .footer {
   display: flex;
   align-items: center;
@@ -798,7 +809,13 @@ li {
   border-top: 0.1rem solid #999999;
 }
 
-.footer__text,
+.footer__text {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.4rem;
+  color: #999999;
+  text-decoration: none;
+}
+
 .footer__link {
   font-family: "Montserrat", sans-serif;
   font-size: 1.4rem;
@@ -829,7 +846,7 @@ li {
 }
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  .masterhead-wrapper {
+  .masterhead-wrapper .masterhead-wrapper {
     background: linear-gradient(to top, rgba(252, 227, 138, 0.91), rgba(243, 129, 129, 0.67)), url(../images/main@2x.png) center/cover no-repeat;
   }
 }

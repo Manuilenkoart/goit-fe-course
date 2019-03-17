@@ -1,0 +1,27 @@
+.services-list__item  {
+  svg {
+    width: 32px;
+    height: 32px;
+    fill: $main-font-color;
+  }
+  
+}
+
+.nav-list__icon-svg {
+  width: 18px;
+  height: 14px;
+  fill: $third-color;
+} 
+
+.team__overlay-link {
+  svg {
+    width: 32px;
+    height: 32px;
+    fill: $second-color;
+  }
+
+}
+
+.team__overlay-link:hover svg {
+  fill: #ffffff;
+}
