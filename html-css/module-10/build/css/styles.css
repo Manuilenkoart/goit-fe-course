@@ -382,13 +382,87 @@ template {
   background: linear-gradient(to top, rgba(252, 227, 138, 0.91), rgba(243, 129, 129, 0.67)), url(../images/main.png) center/cover no-repeat;
 }
 
+.team__title::after,
+.team__img::before,
+.nav-list__link:hover::after,
+.header__icon-link:hover::after,
+.services__title::after {
+  display: table;
+  content: "";
+  clear: both;
+}
+
+.team__last-name,
+.nav-list__link,
+.header__icon-link,
+.services-item__title,
+.footer__text,
+.footer__text-copy,
+.footer__link,
+.form {
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+
+.team__title {
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+
+.team__title::after {
+  width: 6rem;
+  border: 0.3rem solid #f38181;
+  margin: 4rem auto 6rem auto;
+}
+
+.team__title-it {
+  display: block;
+  font-family: "Kaushan Script", cursive;
+  font-size: 2.4rem;
+  text-transform: none;
+  color: #333333;
+  font-weight: normal;
+}
+
+.team__title-mt {
+  margin-top: 2rem;
+}
+
+.team__title-mb {
+  margin-bottom: 2.5rem;
+}
+
+.team__descr {
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 2.4rem;
+  color: #999999;
+}
+
+.team__descr-mb {
+  margin-bottom: 10rem;
+}
+
+.team__descr-p {
+  padding: 0 11rem;
+}
+
+.team__list {
+  display: flex;
+  justify-content: space-between;
+}
+
 .team__cont {
   position: relative;
 }
 
 .team__cont:hover {
-  -webkit-transform: translate(-10px, -10px);
-  transform: translate(-10px, -10px);
+  -webkit-transform: translate(-1rem, -1rem);
+  transform: translate(-1rem, -1rem);
   transition: 0.2s linear;
 }
 
@@ -403,7 +477,7 @@ template {
 .team__cont:hover .team__overlay {
   visibility: visible;
   opacity: 0.9;
-  box-shadow: 10px 10px 0px 0px #95e1d3;
+  box-shadow: 1rem 1rem 0px 0px #95e1d3;
   transition: 0.2s linear;
 }
 
@@ -414,8 +488,6 @@ template {
 }
 
 .team__img::before {
-  content: "";
-  clear: both;
   position: absolute;
   top: 0;
   left: 0;
@@ -443,13 +515,13 @@ template {
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   display: flex;
-  width: 230px;
+  width: 23rem;
   justify-content: space-between;
 }
 
 .team__overlay-link {
-  width: 56px;
-  height: 56px;
+  width: 5.6rem;
+  height: 5.6rem;
   background-color: #fce38a;
   display: flex;
   justify-content: center;
@@ -461,22 +533,22 @@ template {
 }
 
 .team__last-name {
-  margin-top: 30px;
-  margin-bottom: 15px;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
   text-align: center;
-  font-family: var(--main-font);
-  font-size: 14px;
-  color: var(--font-color-b);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  color: #333333;
   text-transform: uppercase;
 }
 
 .team__position {
-  font-family: var(--font-roboto);
-  font-size: 15px;
-  line-height: 24px;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5rem;
+  line-height: 2.4rem;
   font-weight: 300;
   font-style: italic;
-  color: var(--font-color-light-b);
+  color: #999999;
   text-align: center;
 }
 
@@ -610,8 +682,6 @@ li {
   font-family: "Montserrat", sans-serif;
   color: #ffffff;
   text-transform: uppercase;
-  font-size: 1.4rem;
-  font-weight: 400;
 }
 
 .nav-list__link:hover {
@@ -619,9 +689,6 @@ li {
 }
 
 .nav-list__link:hover::after {
-  display: table;
-  content: "";
-  clear: both;
   width: 100%;
   border: 0.1rem solid #fce38a;
   margin-top: 1rem;
@@ -643,8 +710,6 @@ li {
   font-family: "Montserrat", sans-serif;
   color: #ffffff;
   text-transform: uppercase;
-  font-size: 1.4rem;
-  font-weight: 400;
 }
 
 .header__icon-link:hover {
@@ -652,9 +717,6 @@ li {
 }
 
 .header__icon-link:hover::after {
-  display: table;
-  content: "";
-  clear: both;
   width: 100%;
   border: 0.1rem solid #fce38a;
   margin-top: 1rem;
@@ -668,9 +730,6 @@ li {
 }
 
 .services__title::after {
-  display: block;
-  content: "";
-  clear: both;
   width: 6rem;
   border: 0.3rem solid #f38181;
   margin: 4rem auto 6rem auto;
@@ -715,7 +774,6 @@ li {
 
 .services-item__title {
   font-family: "Montserrat", sans-serif;
-  font-size: 1.4rem;
   color: #333333;
   text-transform: uppercase;
 }
@@ -728,97 +786,23 @@ li {
   color: #999999;
 }
 
-.team__title {
-  text-align: center;
-  font-family: "Montserrat", sans-serif;
-  font-size: 3rem;
-  text-transform: uppercase;
-}
-
-.team__title::after {
-  display: block;
-  content: "";
-  clear: both;
-  width: 6rem;
-  border: 0.3rem solid #f38181;
-  margin: 4rem auto 6rem auto;
-}
-
-.team__title-it {
-  display: block;
-  font-family: "Kaushan Script", cursive;
-  font-size: 2.4rem;
-  text-transform: none;
-  color: #333333;
-  font-weight: normal;
-}
-
-.team__title-mt {
-  margin-top: 2rem;
-}
-
-.team__title-mb {
-  margin-bottom: 2.5rem;
-}
-
-.team__descr {
-  text-align: center;
-  font-family: "Roboto", sans-serif;
-  font-size: 1.5rem;
-  font-weight: 400;
-  line-height: 2.4rem;
-  color: #999999;
-}
-
-.team__descr-mb {
-  margin-bottom: 10rem;
-}
-
-.team__descr-p {
-  padding: 0 11rem;
-}
-
-.team__list {
-  display: flex;
-  justify-content: space-between;
-}
-
-.team__last-name {
-  font-family: "Montserrat", sans-serif;
-  font-size: 1.4rem;
-  color: #333333;
-  text-transform: uppercase;
-}
-
-.team__position {
-  font-family: "Roboto", sans-serif;
-  font-size: 1.5rem;
-  line-height: 2.4rem;
-  font-weight: 300;
-  font-style: italic;
-  color: #999999;
-  text-align: center;
-}
-
 .footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-top: 8rem;
   padding: 1rem 0;
-  border-top: 0.1rem solid #999999;
+  border-top: 0.1rem solid #e5e5e5;
 }
 
 .footer__text {
   font-family: "Montserrat", sans-serif;
-  font-size: 1.4rem;
-  color: #999999;
+  color: #333333;
   text-decoration: none;
 }
 
 .footer__link {
   font-family: "Montserrat", sans-serif;
-  font-size: 1.4rem;
   color: #f38181;
   text-decoration: none;
 }
@@ -826,13 +810,25 @@ li {
 .form {
   display: flex;
   font-family: "Montserrat", sans-serif;
-  font-size: 1.4rem;
   color: #f38181;
 }
 
 .form__input-mail {
   padding: 0.8rem 1.5rem;
-  border: 0.1rem solid #999999;
+  border: 0.1rem solid #e5e5e5;
+  font-size: 1.4rem;
+}
+
+.form__input-mail::-webkit-input-placeholder {
+  color: #cccccc;
+}
+
+.form__input-mail::-ms-input-placeholder {
+  color: #cccccc;
+}
+
+.form__input-mail::placeholder {
+  color: #cccccc;
 }
 
 .form__btn {
