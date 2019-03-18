@@ -3,13 +3,14 @@
 */
 
 @import './normalize';
-@import "./vars.scss";
-@import'./vars.scss';
-@import'./wrapper.scss';
-@import'./team.scss';
-@import'./svg.scss';
+@import "./vars";
+@import'./vars';
+@import'./wrapper';
+@import'./extend';
+@import'./team';
+@import'./svg';
 
-* {
+* { 
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -122,17 +123,14 @@ li {
     font-family: $main-font;
     color: $third-color;
     text-transform: uppercase;
-    font-size: 1.4rem;
-    font-weight: 400;
+    @extend %fz14fw400;
    
     &:hover {
       color: $fourth-color;
-    }
+    }  
    
     &:hover::after {
-      display: table;
-      content: "";
-      clear: both;
+      @extend %content;
       width: 100%;
       border: 0.1rem solid $fourth-color;
       margin-top: 1rem;
@@ -155,17 +153,14 @@ li {
     font-family: $main-font;
     color: $third-color;
     text-transform: uppercase;
-    font-size: 1.4rem;
-    font-weight: 400;
+    @extend %fz14fw400;
    
     &:hover {
       color: $fourth-color;
     }
    
     &:hover::after {
-      display: table;
-      content: "";
-      clear: both;
+      @extend %content;
       width: 100%;
       border: 0.1rem solid $fourth-color;
       margin-top: 1rem;
@@ -181,14 +176,12 @@ li {
     text-transform: uppercase;
     
     &::after {
-      display: block;
-      content: "";
-      clear: both;
+      @extend %content;
       width: 6rem;
       border: 0.3rem solid $second-color;
       margin: 4rem auto 6rem auto;
     }
-    
+     
     &-it {
       display: block;
       font-family: $font-kausan;
@@ -228,8 +221,8 @@ li {
   width: 30rem;
   
   &__title {
+    @extend %fz14fw400;
     font-family: $main-font;
-    font-size: 1.4rem;
     color: $font-color-b;
     text-transform: uppercase;
   }
@@ -240,80 +233,6 @@ li {
     font-weight: 400;
     line-height: 2.4rem;
     color: $font-color-light-b;
-  }
-}
-
-.team {
-  &__title {
-    text-align: center;
-    font-family: $main-font;
-    font-size: 3rem;
-    text-transform: uppercase; 
-    
-    &::after {
-      display: block;
-      content: "";
-      clear: both;
-      width: 6rem;
-      border: 0.3rem solid $second-color;
-      margin: 4rem auto 6rem auto;
-    }
-    
-    &-it {
-      display: block;
-      font-family: $font-kausan;
-      font-size: 2.4rem;
-      text-transform: none;
-      color: $font-color-b;
-      font-weight: normal;
-    }
-    
-    &-mt {
-      margin-top: 2rem;
-    }
-    
-    &-mb {
-      margin-bottom: 2.5rem;
-    }
-  }
-  
-  &__descr {
-    text-align: center;
-    font-family: $font-roboto;
-    font-size: 1.5rem;
-    font-weight: 400;
-    line-height: 2.4rem;
-    color: $font-color-light-b;
-    
-    &-mb {
-      margin-bottom: 10rem;
-    }
-    
-    &-p {
-      padding: 0 11rem;
-    }
-  }
-  
-  &__list {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  &__last-name {
-    font-family: $main-font;
-    font-size: 1.4rem;
-    color: $font-color-b;
-    text-transform: uppercase;
-  }
-
-  &__position {
-    font-family: $font-roboto;
-    font-size: 1.5rem;
-    line-height: 2.4rem;
-    font-weight: 300;
-    font-style: italic;
-    color: $font-color-light-b;
-    text-align: center;
   }
 }
 
@@ -326,15 +245,15 @@ li {
   border-top: 0.1rem solid $font-color-light-b;
  
   &__text {
+    @extend %fz14fw400;
     font-family: $main-font;
-    font-size: 1.4rem;
     color: $font-color-light-b;
     text-decoration: none;
   }
    
   &__link {
+    @extend %fz14fw400;
     font-family: $main-font;
-    font-size: 1.4rem;
     color: $second-color;
     text-decoration: none;
   }
@@ -342,8 +261,8 @@ li {
 
 .form {
   display: flex;
+  @extend %fz14fw400;
   font-family: $main-font;
-  font-size: 1.4rem;
   color: $second-color;
   
   &__input-mail {
