@@ -397,6 +397,7 @@ template {
 .header__icon-link,
 .services-item__title,
 .footer__text,
+.footer__text-copy,
 .footer__link,
 .form {
   font-size: 1.4rem;
@@ -791,12 +792,12 @@ li {
   justify-content: space-between;
   margin-top: 8rem;
   padding: 1rem 0;
-  border-top: 0.1rem solid #999999;
+  border-top: 0.1rem solid #e5e5e5;
 }
 
 .footer__text {
   font-family: "Montserrat", sans-serif;
-  color: #999999;
+  color: #333333;
   text-decoration: none;
 }
 
@@ -814,7 +815,20 @@ li {
 
 .form__input-mail {
   padding: 0.8rem 1.5rem;
-  border: 0.1rem solid #999999;
+  border: 0.1rem solid #e5e5e5;
+  font-size: 1.4rem;
+}
+
+.form__input-mail::-webkit-input-placeholder {
+  color: #cccccc;
+}
+
+.form__input-mail::-ms-input-placeholder {
+  color: #cccccc;
+}
+
+.form__input-mail::placeholder {
+  color: #cccccc;
 }
 
 .form__btn {

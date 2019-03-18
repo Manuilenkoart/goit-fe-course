@@ -242,13 +242,17 @@ li {
   justify-content: space-between;
   margin-top: 8rem;
   padding: 1rem 0;
-  border-top: 0.1rem solid $font-color-light-b;
+  border-top: 0.1rem solid $sixth-color;
  
   &__text {
     @extend %fz14fw400;
     font-family: $main-font;
-    color: $font-color-light-b;
+    color: $font-color-b;
     text-decoration: none;
+
+    &-copy {
+      @extend %fz14fw400;  
+    } 
   }
    
   &__link {
@@ -267,7 +271,12 @@ li {
   
   &__input-mail {
     padding: 0.8rem 1.5rem;
-    border: 0.1rem solid $font-color-light-b;
+    border: 0.1rem solid $sixth-color;
+    font-size: 1.4rem;
+    
+    &::placeholder {
+      color: $fifth-color;
+    }
   }
   
   &__btn {
@@ -279,4 +288,4 @@ li {
     line-height: 1;
     font-weight: 700;
   }
-}
+} 
