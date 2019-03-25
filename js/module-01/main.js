@@ -65,39 +65,6 @@
 
 // PS: используй switch
 
-// let country = prompt("Введите страну доставки");
-// let price;
-// const countryMass = ["Индия", "Южная америка", "Австралия", "Китай","Ямайка"];
-
-// for (var i = 0; i < countryMass.length; i++) {
-//   if ( countryMass[i] !==country) {
-
-//     alert("В вашей стране доставка не доступна");
-
-//   } else {
-
-//     switch (country) {
-//       case "Индия":
-//         price = 80;
-
-//         break;
-//       case "Южная америка":
-//         price = 250;
-//         break;
-//       case "Австралия":
-//         price = 170;
-//         break;
-//       case "Китай":
-//         price = 100;
-//         break;
-//       case "Ямайка":
-//         price = 120;
-
-//         break;
-//     }
-//       alert(`Доставка в ${country} будет стоить ${price}`);
-//   }
-// }
 
 let country = prompt("Введите страну доставки");
 let price;
