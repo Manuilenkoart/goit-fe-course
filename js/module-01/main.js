@@ -65,14 +65,17 @@
 
 // PS: используй switch
 
-
 let country = prompt("Введите страну доставки");
 let price;
-const india = "Индия";
-const china = "Китай";
-const southAmerica = "Южная америка";
-const australia = "Австралия";
-const jamaica = "Ямайка";
+country = country.toLowerCase();
+const india = "индия";
+const china = "китай";
+const southAmerica = "южная америка";
+const australia = "австралия";
+const jamaica = "ямайка";
+function capitaliseFirstLetter(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
 if (
   country === india ||
   country === china ||
@@ -85,20 +88,20 @@ if (
     case india:
       price = 80;
       break;
-    case "Южная америка":
+    case southAmerica:
       price = 250;
       break;
-    case "Австралия":
+    case australia:
       price = 170;
       break;
     case china:
       price = 100;
       break;
-    case "Ямайка":
+    case jamaica:
       price = 120;
       break;
   }
-  alert(`Доставка в ${country} будет стоить ${price}`);
+  alert(`Доставка в ${capitaliseFirstLetter(country)} будет стоить ${price}`);
 } else {
   alert("В вашей стране доставка не доступна");
 }
