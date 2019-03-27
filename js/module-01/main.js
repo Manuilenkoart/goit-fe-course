@@ -68,37 +68,33 @@ console.log('Недостаточно средств на счету!');
 let country = prompt("Введите страну доставки");
 let price;
 country = country.toLowerCase();
-const india = "индия";
-const china = "китай";
-const southAmerica = "южная америка";
-const australia = "австралия";
-const jamaica = "ямайка";
+
 function capitaliseFirstLetter(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
 switch (country) {
-  case india:
+  case "индия":
     price = 80;
     alert(`Доставка в ${capitaliseFirstLetter(country)} будет стоить ${price}`);
     break;
 
-  case southAmerica:
+  case "южная америка":
     price = 250;
     alert(`Доставка в ${capitaliseFirstLetter(country)} будет стоить ${price}`);
     break;
 
-  case australia:
+  case "австралия":
     price = 170;
     alert(`Доставка в ${capitaliseFirstLetter(country)} будет стоить ${price}`);
     break;
 
-  case china:
+  case "китай":
     price = 100;
     alert(`Доставка в ${capitaliseFirstLetter(country)} будет стоить ${price}`);
     break;
 
-  case jamaica:
+  case "ямайка":
     price = 120;
     alert(`Доставка в ${capitaliseFirstLetter(country)} будет стоить ${price}`);
     break;
