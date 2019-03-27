@@ -10,17 +10,17 @@
 // В противном случае, то есть если ни одно из предыдущих условий не выполнилось, записать в message строку 'Добро пожаловать!'
 // После всех проверок вывести в alert значение переменной message.
 
-// const ADMIN_PASSWORD = 'm4ng0h4ckz';
-// let message;
-// let inputPassword = prompt('Введите пароль');
-// if(inputPassword === null) {
-//   message = 'Отменено пользователем!';
-// } else if(inputPassword !== ADMIN_PASSWORD) {
-//   message = 'Доступ запрещен, неверный пароль!';
-// } else {
-//   message = 'Добро пожаловать!';
-// }
-// alert(message);
+const ADMIN_PASSWORD = 'm4ng0h4ckz';
+let message;
+let inputPassword = prompt('Введите пароль');
+if(inputPassword === null) {
+  message = 'Отменено пользователем!';
+} else if(inputPassword !== ADMIN_PASSWORD) {
+  message = 'Доступ запрещен, неверный пароль!';
+} else {
+  message = 'Добро пожаловать!';
+}
+alert(message);
 
 //=======2
 // На счету пользователя есть 23580 кредитов, хранится в переменной credits (создай и присвой).
@@ -37,15 +37,15 @@
 // в противном случае необходимо посчитать остаток кредитов на счету и вывести сообщение 'Вы купили [число] дроидов, на счету осталось [число] кредитов.'
 // Проверь работоспособность скрипта со значениями переменной quantity: 3, 5, 8 и 12.
 
-// let credits = 23580;
-// const pricePerDroid = 3000;
-// let quantity = prompt('Купить дроидов (шт)');
-// let totalPrice = pricePerDroid * quantity;
-// if(totalPrice > credits) {
-// console.log('Недостаточно средств на счету!');
-// } else {
-//   console.log(`Вы купили ${quantity} дроидов, на счету осталось ${credits - totalPrice} кредитов.`)
-// }
+let credits = 23580;
+const pricePerDroid = 3000;
+let quantity = prompt('Купить дроидов (шт)');
+let totalPrice = pricePerDroid * quantity;
+if(totalPrice > credits) {
+console.log('Недостаточно средств на счету!');
+} else {
+  console.log(`Вы купили ${quantity} дроидов, на счету осталось ${credits - totalPrice} кредитов.`)
+}
 
 //=========3
 // Пользователь может оформить доставку товара к себе в страну, указав ее в переменной country, но доставка есть не везде.
@@ -76,32 +76,33 @@ const jamaica = "ямайка";
 function capitaliseFirstLetter(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
 }
-if (
-  country === india ||
-  country === china ||
-  country === southAmerica ||
-  country === australia ||
-  country === jamaica
-) {
-  
-  switch (country) {
-    case india:
-      price = 80;
-      break;
-    case southAmerica:
-      price = 250;
-      break;
-    case australia:
-      price = 170;
-      break;
-    case china:
-      price = 100;
-      break;
-    case jamaica:
-      price = 120;
-      break;
-  }
-  alert(`Доставка в ${capitaliseFirstLetter(country)} будет стоить ${price}`);
-} else {
-  alert("В вашей стране доставка не доступна");
+
+switch (country) {
+  case india:
+    price = 80;
+    alert(`Доставка в ${capitaliseFirstLetter(country)} будет стоить ${price}`);
+    break;
+
+  case southAmerica:
+    price = 250;
+    alert(`Доставка в ${capitaliseFirstLetter(country)} будет стоить ${price}`);
+    break;
+
+  case australia:
+    price = 170;
+    alert(`Доставка в ${capitaliseFirstLetter(country)} будет стоить ${price}`);
+    break;
+
+  case china:
+    price = 100;
+    alert(`Доставка в ${capitaliseFirstLetter(country)} будет стоить ${price}`);
+    break;
+
+  case jamaica:
+    price = 120;
+    alert(`Доставка в ${capitaliseFirstLetter(country)} будет стоить ${price}`);
+    break;
+
+  default:
+    alert("В вашей стране доставка не доступна");
 }
