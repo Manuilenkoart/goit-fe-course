@@ -56,5 +56,6 @@ do {
 
   if (attemptsLeft === attemptsNull) {
     alert("У вас закончились попытки, аккаунт заблокирован!");
+    break;
   }
 } while (input !== null);
