@@ -6,15 +6,15 @@
 // Операция ввода числа пользователем и сохранение в массив продолжается до тех пор, пока пользователь не нажмет Cancel в prompt.
 // После того как пользователь прекратил ввод нажав Cancel, если массив не пустой, необходимо посчитать сумму всех элементов массива и записать ее в переменную total. Используй цикл for или for...of. После чего в консоль выведи строку 'Общая сумма чисел равна [сумма]'
 const numbers = [];
-let input;
+let inputNumber;
 let total = 0;
 
 do {
-  input = prompt("Введите число");
-  numbers.push(input);
-  console.log("input prompt: ", input);
+  inputNumber = prompt("Введите число");
+  numbers.push(inputNumber);
+  console.log("input prompt: ", inputNumber);
   console.log("number arry: ", numbers);
-  if (input === null) {
+  if (inputNumber === null) {
     for (let i = 0; i < numbers.length; i += 1) {
       total += Number(numbers[i]);
     }
@@ -22,7 +22,7 @@ do {
       console.log(`Общая сумма чисел равна ${total}`);
     }
   }
-} while (input !== null);
+} while (inputNumber !== null);
 
 // Напиши скрипт имитирующий авторизацию пользователя.
 
