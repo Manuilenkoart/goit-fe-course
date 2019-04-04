@@ -11,16 +11,19 @@ let total = 0;
 
 do {
   inputNumber = prompt("Введите число");
-  numbers.push(inputNumber);
+  
+  if (inputNumber !== null && inputNumber !== " "&& inputNumber !== "") {
+    numbers.push(inputNumber);
+  }
+
   console.log("input prompt: ", inputNumber);
   console.log("number arry: ", numbers);
-  if (inputNumber === null) {
+
+  if (inputNumber === null && numbers.length > 0) {
     for (let i = 0; i < numbers.length; i += 1) {
       total += Number(numbers[i]);
     }
-    if (total !== 0) {
-      console.log(`Общая сумма чисел равна ${total}`);
-    }
+    console.log(`Общая сумма чисел равна ${total}`);
   }
 } while (inputNumber !== null);
 
@@ -37,26 +40,21 @@ do {
 let input;
 const passwords = ["qwerty", "111qwe", "123123", "r4nd0mp4zzw0rd"];
 let attemptsLeft = 3;
-const attemptsNull = 0;
 
 do {
   input = prompt("Введите пароль");
+  console.log(`attemptsLeft начало ${attemptsLeft}`);
 
-  for (const enter of passwords) {
-    if (enter === input) {
-      alert("Добро пожаловать");
+  if (passwords.includes(input)) {
+    alert("Добро пожаловать");
+    break;
+  } else {
+    attemptsLeft -= 1;
+    if (attemptsLeft === 0) {
+      alert("У вас закончились попытки, аккаунт заблокирован!");
       break;
     }
-  }
-  for (const notFound of passwords) {
-    if (notFound !== input) {
-      attemptsLeft -= 1;
-      break;
-    }
-  }
-
-  if (attemptsLeft === attemptsNull) {
-    alert("У вас закончились попытки, аккаунт заблокирован!");
-    break; 
+    alert(`Неверный пароль, у вас осталось ${attemptsLeft} попыток`);
+    console.log("attemptsLeft ", attemptsLeft);
   }
 } while (input !== null);
