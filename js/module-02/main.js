@@ -8,22 +8,24 @@
 const numbers = [];
 let inputNumber;
 let total = 0;
-
 do {
   inputNumber = prompt("Введите число");
-  
-  if (inputNumber !== null && inputNumber !== " "&& inputNumber !== "") {
-    numbers.push(inputNumber);
+ 
+  if (inputNumber !== null) {
+    inputNumber = Number(inputNumber);
+    if(Number.isNaN(inputNumber) !==true){
+      numbers.push(inputNumber);
+    }else {
+      alert('Было введено не число, попробуйте еще раз');
+    }
   }
 
-  console.log("input prompt: ", inputNumber);
-  console.log("number arry: ", numbers);
-
-  if (inputNumber === null && numbers.length > 0) {
+  if (inputNumber === null && numbers.length) {
     for (let i = 0; i < numbers.length; i += 1) {
-      total += Number(numbers[i]);
+      total += numbers[i];
     }
     console.log(`Общая сумма чисел равна ${total}`);
+    break;
   }
 } while (inputNumber !== null);
 
@@ -43,7 +45,9 @@ let attemptsLeft = 3;
 
 do {
   input = prompt("Введите пароль");
-  console.log(`attemptsLeft начало ${attemptsLeft}`);
+  if (input === null) {
+    break;
+  }
 
   if (passwords.includes(input)) {
     alert("Добро пожаловать");
@@ -55,6 +59,5 @@ do {
       break;
     }
     alert(`Неверный пароль, у вас осталось ${attemptsLeft} попыток`);
-    console.log("attemptsLeft ", attemptsLeft);
   }
 } while (input !== null);
