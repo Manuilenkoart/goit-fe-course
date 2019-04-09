@@ -24,15 +24,10 @@ const addLogin = function(allLogins, login) {
   }
 
   if (isLoginUnique(allLogins, login)) {
-    console.log(isLoginUnique(allLogins, login));
-
     logins.push(login);
-
     return "Логин успешно добавлен!";
   }
   if (!isLoginUnique(allLogins, login)) {
-    console.log(isLoginUnique(allLogins, login));
-
     return "Такой логин уже используется!";
   }
 };
@@ -41,7 +36,6 @@ const addLogin = function(allLogins, login) {
 // addLogin(logins, "Ajax"); // 'Логин успешно добавлен!'
 
 // addLogin(logins, "robotGoogles"); // 'Такой логин уже используется!'
-
 
 // addLogin(logins, "Zod"); // 'Ошибка! Логин должен быть от 4 до 16 символов'
 // addLogin(logins, "jqueryisextremelyfast"); // 'Ошибка! Логин должен быть от 4 до 16 символов'
