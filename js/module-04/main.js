@@ -17,9 +17,8 @@ const notepad = {
   },
   findNoteById(id) {
     for (const key of this.notes) {
-      const product = key;
-      if (product.id === id) {
-        return product;
+      if (key.id === id) {
+        return key;
       }
     }
 
@@ -31,7 +30,7 @@ const notepad = {
      */
   },
   saveNote(note) {
-    this.notes.push(note);
+    return this.notes.push(note);
 
     /*
      * Сохраняет заметку в массив notes
@@ -41,6 +40,7 @@ const notepad = {
      */
   },
   deleteNote(id) {
+    // ====1
     // for (let i = 0; i < this.notes.length; i += 1) {
     //   const product = this.notes[i];
     //   console.log(product);
@@ -50,16 +50,19 @@ const notepad = {
     //     return;
     //   }
     // }
+    // ====2
+    //     const product = this.findNoteById(id);
+    //     const indexOfProduct = this.notes.indexOf(product);
 
-    const product = this.findNoteById(id);
-    const indexOfProduct = this.notes.indexOf(product);
-    this.notes.splice(indexOfProduct, 1);
+    // ===3
+    this.notes.splice(this.notes.indexOf(this.findNoteById(id)), 1);
   },
 
   updateNoteContent(id, updatedContent) {
     let product = this.findNoteById(id);
-    product = Object.assign(product, updatedContent);
-    return product;
+     product = Object.assign(product, updatedContent);
+
+  return product
 
     /*
      * Обновляет контент заметки
@@ -84,35 +87,29 @@ const notepad = {
      */
   },
   filterNotesByQuery(query) {
-    // for (let i = 0; i < this.notes.length; i += 1) {
-    //   const product = this.notes[i];
-    //   // console.log(product);
-    //   const productTitle = product.title + " " + product.body;
-    //   // console.log(productTitle);
-    //   const productTitleArry = productTitle.split(" ");
-    //   // console.log(productTitleArry);
-    //   for (let value of productTitleArry) {
-    //     value = value.toLowerCase();
-    //     // console.table(value);
-    //     if (value === query) {
-    //       // console.table(query);
 
-    //       return product;
+    // =====1
+    //     for (const key of this.notes) {
+    //       const product = key;
+    //       let productTitle = product.title;
+    //       productTitle = productTitle.toLowerCase();
+
+    //       let productBody = product.body;
+    //       productBody = productBody.toLowerCase();
+    //       if (productTitle.includes(query) || productBody.includes(query)) {
+    //         return product;
+    //       }
     //     }
-    //   }
-    // }
 
-    for (const key of this.notes) {
-      const product = key;
-      let productTitle = product.title;
-      productTitle = productTitle.toLowerCase();
-
-      let productBody = product.body;
-      productBody = productBody.toLowerCase();
-      if (productTitle.includes(query) || productBody.includes(query)) {
-        return product;
+    // ===2
+    const notesArry = [];
+    for (const note of this.notes) {
+      if (note.title.includes(query) ||  note.body.includes(query) ) {
+        notesArry.push(note);
       }
     }
+    return notesArry;
+
     /*
      * Фильтрует массив заметок по подстроке query.
      * Если значение query есть в заголовке или теле заметки - она подходит
@@ -123,14 +120,12 @@ const notepad = {
   },
   filterNotesByPriority(priority) {
     const productPriority = [];
-    for (const key of this.notes) {
-      const product = key;
-      if (product.priority === priority) {
-        productPriority.push(product);
+    for (const note of this.notes) {
+      if (note.priority === priority) {
+        productPriority.push(note);
       }
     }
     return productPriority;
-
     /*
      * Фильтрует массив заметок по значению приоритета
      * Если значение priority совпадает с приоритетом заметки - она подходит
@@ -176,28 +171,29 @@ notepad.saveNote({
   priority: Priority.LOW
 });
 
-console.table("Все текущие заметки: ", notepad.getNotes());
+console.table("Все текущие заметки: ", notepad.getNotes()); 
 // /*
 //  * Зима уже близко, пора поднять приоритет на покупку одежды
-//  */
+// //  */
 notepad.updateNotePriority("id-4", Priority.NORMAL);
 
 console.log(
   "Заметки после обновления приоритета для id-4: ",
   notepad.getNotes()
 );
-// /*
-//  * Решил что фреймворки отложу немного, понижаю приоритет
-//  */
+
+// // /*
+// //  * Решил что фреймворки отложу немного, понижаю приоритет
+// //  */
 notepad.updateNotePriority('id-3', Priority.LOW);
 
 console.log(
   'Заметки после обновления приоритета для id-3: ',
   notepad.getNotes(),
 );
-// /*
-//  * Решил отфильтровать заметки по слову html
-//  */
+// // /*
+// //  * Решил отфильтровать заметки по слову html
+// //  */
  console.log(
   'Отфильтровали заметки по ключевому слову "html": ',
   notepad.filterNotesByQuery("html")
@@ -207,18 +203,18 @@ console.log(
 //  */
 console.log(
   'Отфильтровали заметки по ключевому слову "javascript": ',
-  notepad.filterNotesByQuery('javascript'),
+  notepad.filterNotesByQuery("javascript")
 );
-// /*
-//  * Хочу посмотреть только заметки с нормальным приоритетом
+// // /*
+// //  * Хочу посмотреть только заметки с нормальным приоритетом
 //  */
 console.log(
   "Отфильтровали заметки по нормальному приоритету: ",
   notepad.filterNotesByPriority(Priority.NORMAL)
 );
-// /*
-//  * Обновим контент заметки с id-3
-//  */
+// // /*
+// //  * Обновим контент заметки с id-3
+// //  */
 notepad.updateNoteContent("id-3", {
   title: "Get comfy with React.js or Vue.js"
 });
@@ -227,8 +223,8 @@ console.log(
   "Заметки после обновления контента заметки с id-3: ",
   notepad.getNotes()
 );
-// /*
-//  * Повторил HTML и CSS, удаляю запись c id-2
-//  */
+// // /*
+// //  * Повторил HTML и CSS, удаляю запись c id-2
+// //  */
 notepad.deleteNote("id-2");
 console.log("Заметки после удаления с id -2: ", notepad.getNotes());
