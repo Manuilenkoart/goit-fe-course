@@ -107,7 +107,7 @@ const notepad = {
     for (const note of this.notes) {
       const lowTitle = note.title.toLowerCase();
       const lowBody = note.body.toLowerCase();
-      if (lowTitle.includes(query) || lowBody.includes(query)) {
+      if (lowTitle.includes(lowQuery) || lowBody.includes(lowQuery)) {
         notesArry.push(note);
       }
     }
