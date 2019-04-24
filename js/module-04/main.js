@@ -60,9 +60,9 @@ const notepad = {
 
   updateNoteContent(id, updatedContent) {
     let product = this.findNoteById(id);
-     product = Object.assign(product, updatedContent);
+    product = Object.assign(product, updatedContent);
 
-  return product
+    return product;
 
     /*
      * Обновляет контент заметки
@@ -87,7 +87,6 @@ const notepad = {
      */
   },
   filterNotesByQuery(query) {
-
     // =====1
     //     for (const key of this.notes) {
     //       const product = key;
@@ -102,12 +101,18 @@ const notepad = {
     //     }
 
     // ===2
+
+    const lowQuery = query.toLowerCase();
     const notesArry = [];
     for (const note of this.notes) {
-      if (note.title.includes(query) ||  note.body.includes(query) ) {
+      const lowTitle = note.title.toLowerCase();
+      const lowBody = note.body.toLowerCase();
+      if (lowTitle.includes(query) || lowBody.includes(query)) {
         notesArry.push(note);
       }
     }
+    console.log("arry  ", notesArry);
+
     return notesArry;
 
     /*
@@ -171,10 +176,10 @@ notepad.saveNote({
   priority: Priority.LOW
 });
 
-console.table("Все текущие заметки: ", notepad.getNotes()); 
-// /*
-//  * Зима уже близко, пора поднять приоритет на покупку одежды
-// //  */
+console.table("Все текущие заметки: ", notepad.getNotes());
+/*
+ * Зима уже близко, пора поднять приоритет на покупку одежды
+//  */
 notepad.updateNotePriority("id-4", Priority.NORMAL);
 
 console.log(
@@ -182,32 +187,32 @@ console.log(
   notepad.getNotes()
 );
 
-// // /*
-// //  * Решил что фреймворки отложу немного, понижаю приоритет
-// //  */
+/*
+ * Решил что фреймворки отложу немного, понижаю приоритет
+ */
 notepad.updateNotePriority('id-3', Priority.LOW);
 
 console.log(
   'Заметки после обновления приоритета для id-3: ',
   notepad.getNotes(),
 );
-// // /*
-// //  * Решил отфильтровать заметки по слову html
-// //  */
- console.log(
+/*
+ * Решил отфильтровать заметки по слову html
+ */
+console.log(
   'Отфильтровали заметки по ключевому слову "html": ',
   notepad.filterNotesByQuery("html")
 );
-// /*
-//  * Решил отфильтровать заметки по слову javascript
-//  */
+/*
+ * Решил отфильтровать заметки по слову javascript
+ */
 console.log(
   'Отфильтровали заметки по ключевому слову "javascript": ',
   notepad.filterNotesByQuery("javascript")
 );
-// // /*
-// //  * Хочу посмотреть только заметки с нормальным приоритетом
-//  */
+/*
+ * Хочу посмотреть только заметки с нормальным приоритетом
+ */
 console.log(
   "Отфильтровали заметки по нормальному приоритету: ",
   notepad.filterNotesByPriority(Priority.NORMAL)
