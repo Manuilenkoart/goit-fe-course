@@ -30,7 +30,10 @@ const notepad = {
      */
   },
   saveNote(note) {
-    return this.notes.push(note);
+    this.notes.push(note);
+return this.notes[this.notes.length-1];
+
+    
 
     /*
      * Сохраняет заметку в массив notes
@@ -105,14 +108,10 @@ const notepad = {
     const lowQuery = query.toLowerCase();
     const notesArry = [];
     for (const note of this.notes) {
-      const lowTitle = note.title.toLowerCase();
-      const lowBody = note.body.toLowerCase();
-      if (lowTitle.includes(lowQuery) || lowBody.includes(lowQuery)) {
+      if (note.title.toLowerCase().includes(lowQuery) || note.body.toLowerCase().includes(lowQuery)) {
         notesArry.push(note);
       }
     }
-    console.log("arry  ", notesArry);
-
     return notesArry;
 
     /*
