@@ -21,7 +21,7 @@ class Notepad {
   }
   saveNote(note) {
     this.notes.push(note);
-    return this.notes[this.notes.length - 1];
+    return note;
   }
   deleteNote(id) {
     this.notes.splice(this.notes.indexOf(this.findNoteById(id)), 1);
@@ -51,7 +51,7 @@ class Notepad {
     }
     return notesArry;
   }
-  filterNotesByPriority = function(priority) {
+  filterNotesByPriority(priority) {
     const productPriority = [];
     for (const note of this.notes) {
       if (note.priority === priority) {
@@ -59,7 +59,7 @@ class Notepad {
       }
     }
     return productPriority;
-  };
+  }
 }
 
 const initialNotes = [
