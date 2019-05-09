@@ -212,4 +212,93 @@
 // console.log(getGuestById(guests, 5)); // undefined
 
 // ======7
+/*
+ * Напиши функцию getTotal(order), которая получает обьект заказа с продуктами и их ценой.
+ * Функция возвращает число - общую стоимость заказа.
+ *
+ * Используй метод reduce.
+//  */
+// const getTotal = order => {
+//   const valuesArry = Object.values(order);
 
+//   return valuesArry.reduce((totalPrice, val) => totalPrice + val, 0);
+// };
+
+// console.log(getTotal({ apples: 25, chicken: 60, milk: 15 })); // 100
+
+// console.log(getTotal({ bread: 10, apples: 25, milk: 15, cheese: 40 })); // 90
+
+// console.log(getTotal({ bread: 10, chicken: 60, cheese: 40 })); // 110
+
+// ==== 8
+/*
+  Напиши функцию getTotal(products, order), где 
+  products - объект со свойствами "имя продукта":"цена за единицу"
+  order - объект со свойствами "имя продукта":"количество единиц".
+  
+  Функция возвращает общую сумму стоимости всех продуктов заказа.
+  
+  Используй метод reduce.
+*/
+
+const products = {
+  bread: 10,
+  milk: 15,
+  apples: 20,
+  cheese: 30,
+  chicken: 40
+};
+
+const orderA = {
+  bread: 2,
+  apples: 4,
+  chicken: 1
+};
+
+const orderB = {
+  bread: 1,
+  milk: 2,
+  cheese: 2,
+  apples: 1
+};
+
+const orderC = {
+  bread: 2,
+  cheese: 2
+};
+const getTotal = (products, order) => {
+  // const productsKeys = Object.keys(products);
+  // const orderKeys = Object.keys(order);
+  // const productArry = Object.values(products);
+  // const orderArry = Object.values(order);
+
+  // console.log(productsKeys);
+  // console.log(orderKeys);
+  // console.log(productArry);
+
+  // const productPrice = productArry.reduce(
+  //   (totalPrice, product) => totalPrice + product,
+  //   0
+  // );
+  // console.log(productPrice);
+  // const entriesProducts = Object.entries(products);
+  // console.log(entriesProducts);
+
+  const productArry = Object.values(products);
+  console.log(productArry);
+  const orderArry = Object.values(order);
+  console.log(orderArry);
+  return productArry.reduce((totalPrice, value) => {
+    //  numbers.reduce((acc, value) => acc + value, 0);
+    console.log("totalPrice", totalPrice);
+
+    console.log("value", value);
+    console.log("orderArry", orderArry);
+    totalPrice;
+    value;
+  });
+};
+// Вызовы функции для проверки
+console.log(getTotal(products, orderA)); // 140
+// console.log(getTotal(products, orderB)); // 120
+// console.log(getTotal(products, orderC)); // 80
