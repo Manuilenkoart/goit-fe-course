@@ -88,12 +88,19 @@ const users = [
 
 // Получить массив имен всех пользователей (поле name).
 const getAllNames = users => {
-  const names = users.map(user => user.name);
-  return names;
+  return users.map(user => user.name);
 };
 
 console.log(getAllNames(users));
-// [ 'Moore Hensley', 'Sharlene Bush', 'Ross Vazquez', 'Elma Head', 'Carey Barr', 'Blackburn Dotson', 'Sheree Anthony' ]
+[
+  "Moore Hensley",
+  "Sharlene Bush",
+  "Ross Vazquez",
+  "Elma Head",
+  "Carey Barr",
+  "Blackburn Dotson",
+  "Sheree Anthony"
+];
 
 // Получить массив объектов пользователей по цвету глаз (поле eyeColor).
 const getUsersByEyeColor = (users, color) => {
@@ -144,9 +151,7 @@ console.log(getTotalBalance(users)); // 20916
 // Массив имен всех пользователей у которых есть друг с указанным именем.
 const getUsersByFriend = (users, name) => {
   const usersFilter = users.filter(user => {
-    if (user.friends.includes(name)) {
-      return user.name;
-    }
+    return user.friends.includes(name);
   });
   return usersFilter.map(user => user.name);
 };
@@ -178,13 +183,11 @@ const getUniqueSkills = users => {
 console.log(getUniqueSkills(users));
 // [ 'adipisicing', 'amet', 'anim', 'commodo', 'culpa', 'elit', 'ex', 'ipsum', 'irure', 'laborum', 'lorem', 'mollit', 'non', 'nostrud', 'nulla', 'proident', 'tempor', 'velit', 'veniam' ]
 
-
 // Массив имен (поле name) людей, отсортированных в зависимости от количества их друзей (поле friends)
 const getNamesSortedByFriendsCount = users => {
   const sortByActiveDays = (a, b) => a.friends.length - b.friends.length;
   return users.sort(sortByActiveDays).map(user => user.name);
 };
-
 
 console.log(getNamesSortedByFriendsCount(users));
 // [ 'Moore Hensley', 'Sharlene Bush', 'Elma Head', 'Carey Barr', 'Blackburn Dotson', 'Sheree Anthony', 'Ross Vazquez' ]
