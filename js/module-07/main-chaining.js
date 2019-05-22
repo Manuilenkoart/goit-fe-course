@@ -8,43 +8,36 @@ class Users {
     return this._users;
   }
   get allNames() {
-    console.log(this.users.map(user => user.name));
-    return this;
+    return this.users.map(user => user.name);
   }
   EyeColor(color) {
-    console.log(this.users.filter(user => user.eyeColor === color));
-    return this;
+    return this.users.filter(user => user.eyeColor === color);
   }
   getUsersByGender(gender) {
-    console.log(
-      this.users.filter(user => user.gender === gender).map(user => user.name)
-    );
-    return this;
+    return this.users
+      .filter(user => user.gender === gender)
+      .map(user => user.name);
   }
   get inactiveUsers() {
-    console.log(this.users.filter(user => !user.isActive));
-    return this;
+    return this.users.filter(user => !user.isActive);
   }
   getUserByEmail(email) {
-    console.log(this.users.find(user => user.email === email));
-    return this;
+    return this.users.find(user => user.email === email);
   }
   getUsersWithAge(min, max) {
-    console.log(this.users.filter(user => user.age > min && user.age < max));
-    return this;
+    return this.users.filter(user => user.age > min && user.age < max);
   }
   get TotalBalance() {
-    console.log(
-      this.users.reduce((totalBalance, user) => totalBalance + user.balance, 0)
+    return this.users.reduce(
+      (totalBalance, user) => totalBalance + user.balance,
+      0
     );
-    return this;
   }
   getUsersByFriend(name) {
     const usersFilter = this.users.filter(user => {
       return user.friends.includes(name);
     });
-    console.log(usersFilter.map(user => user.name));
-    return this;
+    return usersFilter.map(user => user.name);
   }
   get uniqueSkills() {
     let arry = [];
@@ -62,13 +55,11 @@ class Users {
 
       return accumulator;
     }, []);
-    console.log(unqiue);
-    return this;
+    return unqiue;
   }
   get namesSortedByFriendsCount() {
     const sortByActiveDays = (a, b) => a.friends.length - b.friends.length;
-    console.log(this.users.sort(sortByActiveDays).map(user => user.name));
-    return this;
+    return this.users.sort(sortByActiveDays).map(user => user.name);
   }
 }
 
@@ -159,8 +150,7 @@ const initialUsers = [
   }
 ];
 const users = new Users(initialUsers);
-
-users.allNames
+const result = users.allNames
   .EyeColor("blue")
   .getUsersByGender("male")
   .inactiveUsers.getUserByEmail("shereeanthony@kog.com")
@@ -169,3 +159,4 @@ users.allNames
   .getUsersWithAge(30, 40)
   .TotalBalance.getUsersByFriend("Briana Decker")
   .getUsersByFriend("Goldie Gentry").uniqueSkills.namesSortedByFriendsCount;
+console.log();

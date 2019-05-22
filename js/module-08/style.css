@@ -1,0 +1,14 @@
+.form {
+  border: 1px solid black;
+}
+.form-section {
+  padding: 0 20px 0 20px;
+}
+.form-list {
+  list-style: none;
+  border: 1px solid black;
+  padding: 0;
+}
+.form-item {
+  padding: 5px;
+}
