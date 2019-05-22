@@ -60,60 +60,46 @@ const quizData = {
 {
   const form = document.querySelector(".form");
   const arryOfObj = quizData.questions;
-  const formTitle = document.createComment("h2");
+  const formTitle = document.createElement("h2");
   formTitle.textContent = quizData.title;
   form.appendChild(formTitle);
 
-  for (const obj of arryOfObj) {
-    const objChoicesArry = obj.choices;
-
+  const createSectionQuestions = arryOfObj.forEach(function(obj, idxx) {
     const section = createQuestion(obj.question);
-    const answerList = createanswerList(section);
-
     form.appendChild(section);
+    const answerList = createanswerList(section);
     section.appendChild(answerList);
-
-    for (const answerChoice of objChoicesArry) {
-      const answer = createQLable(section, answerChoice);
-      answerList.appendChild(answer);
-      // console.log(answerChoice);
-    }
-  }
-
-  // создание секции вопроса
+    const objChoicesArry = obj.choices;
+    const createQuestions = objChoicesArry.forEach((answerChoice, idx) =>
+      answerList.appendChild(createQLable(section, answerChoice, idx, idxx))
+    );
+  });
   function createQuestion(question) {
     const questionContainer = document.createElement("section");
     questionContainer.classList.add("form-section");
-
     const questionTitle = document.createElement("h3");
     questionTitle.textContent = question;
-
     questionContainer.appendChild(questionTitle);
-
     return questionContainer;
   }
   function createanswerList(section) {
     const questionList = document.createElement("ol");
     questionList.classList.add("form-list");
-
     section.appendChild(questionList);
     return questionList;
   }
 
-  function createQLable(section, choices) {
+  function createQLable(section, choices, idx, idxx) {
     const questionItem = document.createElement("li");
     questionItem.classList.add("form-item");
     const questionLabel = document.createElement("label");
     questionLabel.textContent = choices;
-
     const input = document.createElement("input");
-    input.setAttribute("name", "name");
+    input.setAttribute("name", "name" + idxx);
     input.setAttribute("type", "radio");
-    input.setAttribute("value", "value");
+    input.setAttribute("value", idx);
     section.appendChild(questionItem);
-
     questionLabel.appendChild(input);
-
     questionItem.appendChild(questionLabel);
     return questionItem;
   }
