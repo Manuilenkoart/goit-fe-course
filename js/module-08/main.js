@@ -1,82 +1,30 @@
 "use strict";
+import quizData from "./quiz-data.js";
 
-const quizData = {
-  title: "Тест на базовый уровень JavaScript.",
-  questions: [
-    {
-      question: "Что возвращает метод Array.prototype.filter()?",
-      choices: [
-        "Массив, если результат работы содержит более одного элемента",
-        "Один элемент, если только он прошел фильтрацию",
-        "Всегда массив"
-      ],
-      answer: 2
-    },
-    {
-      question: "Как получить список всех ключей объекта obj?",
-      choices: [
-        "obj.keys()",
-        "Object.keys(obj)",
-        "obj.keys",
-        "Object.getKeys(obj)"
-      ],
-      answer: 1
-    },
-    {
-      question: "Что такое статическое свойство класса?",
-      choices: [
-        "Свойство доступное только экземплярам, но не классу",
-        "Свойство доступное только классу, но не его экземплярам",
-        "Свойство которое нельзя изменять после создания"
-      ],
-      answer: 1
-    },
-    {
-      question: "Что такое обещание (promise)?",
-      choices: [
-        "Функция, представляющая конечный результат асинхронной операции",
-        "Данные полученные в результате асинхронной операции",
-        "Объект, представляющий конечный результат асинхронной операции"
-      ],
-      answer: 2
-    },
-    {
-      question: "Выберите не существующий HTTP-метод.",
-      choices: ["PUT", "GET", "GRAB", "DELETE", "PATCH"],
-      answer: 2
-    },
-    {
-      question: "Какой командой будет запускаться npm-скрипт с именем server?",
-      choices: [
-        "npm server",
-        "npm start server",
-        "npm execute server",
-        "npm run server"
-      ],
-      answer: 3
-    }
-  ]
-};
 {
   const form = document.querySelector(".form");
+  const button = document.querySelector(".form-btn");
   const arryOfObj = quizData.questions;
   const formTitle = document.createElement("h2");
   formTitle.textContent = quizData.title;
   form.appendChild(formTitle);
 
-  const createSectionQuestions = arryOfObj.forEach(function(obj, idxx) {
+  arryOfObj.forEach(function(obj, idxx) {
     const section = createQuestion(obj.question);
     form.appendChild(section);
     const answerList = createanswerList(section);
     section.appendChild(answerList);
     const objChoicesArry = obj.choices;
-    const createQuestions = objChoicesArry.forEach((answerChoice, idx) =>
-      answerList.appendChild(createQLable(section, answerChoice, idx, idxx))
+    objChoicesArry.forEach((answerChoice, idx) =>
+      answerList.appendChild(createQLable(section, answerChoice, idx, idxx + 1))
     );
   });
+  form.appendChild(button);
+
   function createQuestion(question) {
     const questionContainer = document.createElement("section");
     questionContainer.classList.add("form-section");
+
     const questionTitle = document.createElement("h3");
     questionTitle.textContent = question;
     questionContainer.appendChild(questionTitle);
@@ -95,7 +43,7 @@ const quizData = {
     const questionLabel = document.createElement("label");
     questionLabel.textContent = choices;
     const input = document.createElement("input");
-    input.setAttribute("name", "name" + idxx);
+    input.setAttribute("name", "question" + idxx);
     input.setAttribute("type", "radio");
     input.setAttribute("value", idx);
     section.appendChild(questionItem);
@@ -103,4 +51,44 @@ const quizData = {
     questionItem.appendChild(questionLabel);
     return questionItem;
   }
+}
+
+// слушатели событий
+const form = document.querySelector("form");
+form.addEventListener("submit", handleSubmitWithFormData);
+
+function handleSubmitWithFormData(event) {
+  event.preventDefault();
+
+  const formData = new FormData(event.currentTarget);
+  const data = {};
+
+  formData.forEach((value, name) => {
+    data[name] = value;
+  });
+
+  const values = Object.values(data);
+  const valuesArry = []; //массив ответов пользователя
+  values.forEach(function(el) {
+    valuesArry.push(Number.parseInt(el));
+  });
+
+  const trueAnswerArry = []; //массив правильных ответов
+  const trueAnswer = quizData.questions;
+  trueAnswer.forEach(function(el) {
+    trueAnswerArry.push(el.answer);
+  });
+
+  let trueAnswerCounter = 0; //счетчик правильных ответов
+
+  for (let i = 0; i < valuesArry.length; i++) {
+    if (valuesArry[i] === trueAnswerArry[i]) {
+      trueAnswerCounter += 1;
+    }
+  }
+
+  console.log("правильных ответов", trueAnswerCounter);
+  const percentTrueAnswer = (100 * trueAnswerCounter) / trueAnswerArry.length;
+  console.log(percentTrueAnswer, "%");
+  const sucsessTestPercent = 80;
 }

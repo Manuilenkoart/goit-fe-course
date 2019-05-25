@@ -1,14 +1,22 @@
 .form {
+  padding: 0 20px;
   border: 1px solid black;
 }
 .form-section {
-  padding: 0 20px 0 20px;
+  border: 1px solid black;
+  margin: 20px 0;
 }
 .form-list {
   list-style: none;
-  border: 1px solid black;
   padding: 0;
 }
 .form-item {
   padding: 5px;
+}
+.form-btn {
+  display: flex;
+  margin: auto;
+  padding: 10px 20px;
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
