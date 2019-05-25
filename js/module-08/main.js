@@ -47,8 +47,9 @@ import quizData from "./quiz-data.js";
     input.setAttribute("type", "radio");
     input.setAttribute("value", idx);
     section.appendChild(questionItem);
-    questionLabel.appendChild(input);
     questionItem.appendChild(questionLabel);
+    questionLabel.appendChild(input);
+
     return questionItem;
   }
 }
