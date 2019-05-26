@@ -19,6 +19,7 @@ import quizData from "./quiz-data.js";
       answerList.appendChild(createQLable(section, answerChoice, idx, idxx + 1))
     );
   });
+
   form.appendChild(button);
 
   function createQuestion(question) {
@@ -53,6 +54,7 @@ import quizData from "./quiz-data.js";
     return questionItem;
   }
 }
+const trueAnswerShow = document.createElement("h3");
 
 // слушатели событий
 const form = document.querySelector("form");
@@ -88,8 +90,12 @@ function handleSubmitWithFormData(event) {
     }
   }
 
-  console.log("правильных ответов", trueAnswerCounter);
   const percentTrueAnswer = (100 * trueAnswerCounter) / trueAnswerArry.length;
-  console.log(percentTrueAnswer, "%");
-  const sucsessTestPercent = 80;
+  const minPercentTrueAnswer = 80;
+  if (percentTrueAnswer >= minPercentTrueAnswer) {
+    trueAnswerShow.textContent = `Ура! Правильных ответов ${trueAnswerCounter}. Тест принят`;
+  } else
+    trueAnswerShow.textContent = `Увы! Правильных ответов ${trueAnswerCounter}`;
+
+  form.appendChild(trueAnswerShow);
 }
