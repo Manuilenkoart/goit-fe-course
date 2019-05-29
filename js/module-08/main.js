@@ -49,7 +49,7 @@ import quizData from "./quiz-data.js";
     input.setAttribute("value", idx);
     section.appendChild(questionItem);
     questionItem.appendChild(questionLabel);
-    questionLabel.appendChild(input);
+    questionLabel.prepend(input);
 
     return questionItem;
   }
