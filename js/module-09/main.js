@@ -31,11 +31,12 @@ function setHref(el, idx, href) {
   el.href = href[idx];
 }
 
-const openModal = document.querySelector(".gallery");
 const closeModal = document.querySelector("button[data-action='close-modal']");
 const jsBackdrop = document.querySelector(".js-backdrop");
+const content = document.querySelector(".content");
+const contentImg = content.lastElementChild;
 
-openModal.addEventListener("click", handleOpenModal);
+galleryUl.addEventListener("click", handleOpenModal);
 closeModal.addEventListener("click", handleCloseModal);
 jsBackdrop.addEventListener("click", handleCloseModal);
 
@@ -43,12 +44,18 @@ function handleOpenModal(e) {
   e.preventDefault();
   const overlay = document.querySelector(".overlay");
   overlay.classList.add("is-visible");
+
+  contentImg.src = e.target.dataset.source;
+  contentImg.alt = e.target.alt;
   window.addEventListener("keydown", handleKeyPress);
 }
 function handleCloseModal(e) {
   const overlay = document.querySelector(".overlay");
   overlay.classList.remove("is-visible");
   window.removeEventListener("keydown", handleKeyPress);
+  // if (contentImg === e.target) {
+  //   return;
+  // }
 }
 function handleKeyPress(e) {
   if (event.code !== "Escape") {
