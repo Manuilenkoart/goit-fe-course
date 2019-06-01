@@ -38,7 +38,7 @@ const contentImg = content.lastElementChild;
 
 galleryUl.addEventListener("click", handleOpenModal);
 closeModal.addEventListener("click", handleCloseModal);
-jsBackdrop.addEventListener("click", handleCloseModal);
+jsBackdrop.addEventListener("click", handleBackdropClick);
 
 function handleOpenModal(e) {
   e.preventDefault();
@@ -53,9 +53,13 @@ function handleCloseModal(e) {
   const overlay = document.querySelector(".overlay");
   overlay.classList.remove("is-visible");
   window.removeEventListener("keydown", handleKeyPress);
-  // if (contentImg === e.target) {
-  //   return;
-  // }
+}
+function handleBackdropClick(event) {
+  if (event.target !== event.currentTarget) {
+    return;
+  }
+
+  handleCloseModal();
 }
 function handleKeyPress(e) {
   if (event.code !== "Escape") {
