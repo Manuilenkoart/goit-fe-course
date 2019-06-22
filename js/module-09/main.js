@@ -44,7 +44,6 @@ function handleOpenModal(e) {
   e.preventDefault();
   const overlay = document.querySelector(".overlay");
   overlay.classList.add("is-visible");
-
   contentImg.src = e.target.dataset.source;
   contentImg.alt = e.target.alt;
   window.addEventListener("keydown", handleKeyPress);
@@ -52,6 +51,7 @@ function handleOpenModal(e) {
 function handleCloseModal(e) {
   const overlay = document.querySelector(".overlay");
   overlay.classList.remove("is-visible");
+  contentImg.src = " ";
   window.removeEventListener("keydown", handleKeyPress);
 }
 function handleBackdropClick(event) {
