@@ -9,7 +9,6 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
-  "homepage": "https://manuilenkoart.github.io/goit-fe-course",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/manuilenkoart/goit-fe-course.git"
