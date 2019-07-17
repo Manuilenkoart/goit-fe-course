@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[0],{"6xNn":function(n,o){},L1EO:function(n,o,i){},QfWi:function(n,o,i){"use strict";i.r(o);var t;i("JBxO"),i("FdtR"),(t={maximumAge:3e4},new Promise(function(n,o){navigator.geolocation.getCurrentPosition(n,o,t)})).then(function(n){console.log(n)}).catch(function(n){console.log(n)});i("6xNn"),i("L1EO")}},[["QfWi",1,2]]]);
-//# sourceMappingURL=main.298aa2fe1aeed4df88d8.js.map
