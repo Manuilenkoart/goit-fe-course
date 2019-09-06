@@ -1,4 +1,22 @@
-Сделать верстку макета ![alt text](https://github.com/Manuilenkoart/readme/raw/master/FE-cource/html-css/img/homework-09.png).
+Сделать верстку макета ## mobile
+
+## mobile
+
+<p align="center">
+  <img src='https://github.com/Manuilenkoart/readme/raw/master/FE-cource/html-css/img/homework-09_Mobile.psd.png'/>
+</p>
+
+## tablet
+
+<p align="center">
+  <img src='https://github.com/Manuilenkoart/readme/raw/master/FE-cource/html-css/img/homework-09_Tablet.psd.png'/>
+</p>
+
+## desktop
+
+<p align="center">
+  <img src='https://github.com/Manuilenkoart/readme/raw/master/FE-cource/html-css/img/homework-09_Desktop.psd.png'/>
+</p>
 
 Используя сетку из Bootstrap 4.
 Каcтомизировать ширины контейнера сетки Bootstrap 4 в точках перелома под макет.
