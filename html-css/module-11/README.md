@@ -1,4 +1,6 @@
-Сделать верстку макета ![alt text](https://github.com/Manuilenkoart/readme/raw/master/FE-cource/html-css/img/homework-11.png).
+Сделать верстку макета
+
+![alt text](https://github.com/Manuilenkoart/readme/raw/master/FE-cource/html-css/img/homework-11.png).
 
 Использовать препроцессор SASS.
 Вынести палитру цветов и наборы шрифтов в переменные.

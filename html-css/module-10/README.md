@@ -1,4 +1,6 @@
-Сделать верстку макета ![alt text](https://github.com/Manuilenkoart/readme/raw/master/FE-cource/html-css/img/homework-10.png).
+Сделать верстку макета
+
+![alt text](https://github.com/Manuilenkoart/readme/raw/master/FE-cource/html-css/img/homework-10.png).
 
 Для обеспечения некоторой доли кроссбраузерости подключаем normalize.css.
 Сделать верстку страницы, используя BEM-именование для классов, выделить повторяющиеся компоненты.
