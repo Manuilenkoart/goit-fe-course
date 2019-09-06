@@ -1,11 +1,19 @@
 Используя медиаправила выполнить верстку макета
 
-> Выделять слова можно при помощи \* и \_ . Например, это <em class="a1">italic</em> и это тоже <i class="a1">italic</i>. А вот так уже <b>strong</b>, и так тоже <strong>strong</strong>.
+<center>Используя медиаправила выполнить верстку макета</center>
 
 ## mobile
 
+<center>
 > ![alt text](https://github.com/Manuilenkoart/readme/raw/master/FE-cource/html-css/img/homework-08-mobile.png)
-> ![alt text](https://github.com/Manuilenkoart/readme/raw/master/FE-cource/html-css/img/homework-08-tablet.png).
+</center>
+
+## tablet
+
+> ![alt text](https://github.com/Manuilenkoart/readme/raw/master/FE-cource/html-css/img/homework-08-tablet.png)
+
+## desktop
+
 > ![alt text](https://github.com/Manuilenkoart/readme/raw/master/FE-cource/html-css/img/homework-08-desktop.png)
 
 Верстка должна быть адаптивная, между точками перелома фиксированная.
