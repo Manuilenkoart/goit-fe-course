@@ -9,7 +9,10 @@
 ## tablet
 
 <p align="center">
-  ![alt text](https://github.com/Manuilenkoart/readme/raw/master/FE-cource/html-css/img/homework-08-tablet.png)
+  <img src='https://github.com/Manuilenkoart/readme/raw/master/FE-cource/html-css/img/homework-08-tablet.png'/>
+
+![alt text](https://github.com/Manuilenkoart/readme/raw/master/FE-cource/html-css/img/homework-08-tablet.png)
+
 </p>
 
 ## desktop
