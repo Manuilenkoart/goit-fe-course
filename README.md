@@ -1,3 +1,3 @@
 # ССылка на на все работы
 
-(https://manuilenkoart.github.io/goit-fe-course/)
+[manuilenkoart.github.io/goit-fe-course/](https://manuilenkoart.github.io/goit-fe-course/)
