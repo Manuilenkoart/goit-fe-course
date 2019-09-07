@@ -1,4 +1,7 @@
-- Сверстать страницу на основе макета ![alt text](https://github.com/Manuilenkoart/readme/raw/master/FE-cource/html-css/img/homework-04.png).
+# Сверстать страницу на основе макета
+
+![alt text](https://github.com/Manuilenkoart/readme/raw/master/FE-cource/html-css/img/homework-04.png)
+
 - Верстка фиксированная, пиксельная, размеры соответствуют макету.
 - Расположение блоков на сетке сделано с помощью float.
 - Контентные изображения вставить используя тег img.
