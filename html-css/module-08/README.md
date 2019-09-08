@@ -1,4 +1,4 @@
-# Используя медиаправила выполнить верстку макета [GitHub Pages](https://manuilenkoart.github.io/goit-fe-course/html-css/module-08/index.html)
+# Используя медиаправила выполнить верстку макетов [GitHub Pages](https://manuilenkoart.github.io/goit-fe-course/html-css/module-08/index.html)
 
 ## mobile
 
@@ -19,4 +19,4 @@
 </p>
 
 - Верстка должна быть адаптивная, между точками перелома фиксированная.
-- Верстаем используя Mobile-first CSS подход, начинаем с маленького устройства (телефона).
+- Верстаем используя Mobile-first CSS подход

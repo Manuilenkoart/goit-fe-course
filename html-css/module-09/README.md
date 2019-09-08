@@ -1,4 +1,4 @@
-# Сделать верстку макета [GitHub Pages](https://manuilenkoart.github.io/goit-fe-course/html-css/module-09/index.html)
+# Сделать верстку макетов [GitHub Pages](https://manuilenkoart.github.io/goit-fe-course/html-css/module-09/index.html)
 
 ## mobile
 
@@ -20,4 +20,3 @@
 
 - Используя сетку из Bootstrap 4.
 - Каcтомизировать ширины контейнера сетки Bootstrap 4 в точках перелома под макет.
-- Включите отображение направляющих сетки в Photoshop: View -> Show -> Guides
