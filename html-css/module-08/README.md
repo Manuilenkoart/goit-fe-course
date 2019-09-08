@@ -1,4 +1,4 @@
-# Используя медиаправила выполнить верстку макета
+# Используя медиаправила выполнить верстку макета [GitHub Pages](https://manuilenkoart.github.io/goit-fe-course/html-css/module-08/index.html)
 
 ## mobile
 

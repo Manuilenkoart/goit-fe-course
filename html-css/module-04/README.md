@@ -1,4 +1,4 @@
-# Сверстать страницу на основе макета
+# Сверстать страницу на основе макета [GitHub Pages](https://manuilenkoart.github.io/goit-fe-course/html-css/module-04/index.html)
 
 ![alt text](https://github.com/Manuilenkoart/readme/raw/master/FE-cource/html-css/img/homework-04.png)
 
