@@ -1,4 +1,6 @@
-# Сделать верстку макета [GitHub Pages](https://manuilenkoart.github.io/goit-fe-course/html-css/module-11/build/index.html)
+# Сделать верстку макета
+
+#### [Link to GitHub Pages](https://manuilenkoart.github.io/goit-fe-course/html-css/module-11/build/index.html)
 
 ![alt text](https://github.com/Manuilenkoart/readme/raw/master/FE-cource/html-css/img/homework-11.png)
 

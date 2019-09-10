@@ -1,4 +1,6 @@
-# Сделать верстку макетов [GitHub Pages](https://manuilenkoart.github.io/goit-fe-course/html-css/module-09/index.html)
+# Сделать верстку макетов
+
+#### [Link to GitHub Pages](https://manuilenkoart.github.io/goit-fe-course/html-css/module-09/index.html)
 
 ## mobile
 
